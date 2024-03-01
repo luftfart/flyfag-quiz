@@ -1,5 +1,7 @@
-# Tafels.App
+# Quiz |  flyfag
 
+[ ] adsense
+[ ] data source from logseq
 A simple game to teach kids basic math (multiplication tables, additions, etc.)
 
 Made with:
