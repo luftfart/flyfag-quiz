@@ -17,7 +17,7 @@
 
     //console.log("modules",modules)
    
-    let categories = [modules];
+    let categories = []; //adds, subtracts, adds, tables, modules
     _modules.forEach(module => {
       // @ts-ignore
       categories.push(module);
