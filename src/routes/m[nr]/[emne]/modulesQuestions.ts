@@ -38,7 +38,7 @@ function generateTableQuestions(base: number) {
 console.log("--->",`m${emne}`, )
 
 const  definition = {
-  title: "Moduler 1-15 | Part66 Prøveeksamen",
+  title: `Module ${emne}`, //| Part66 Prøveeksamen
   category: "modules",
   slug: `m${emne}`,
 };

@@ -134,8 +134,8 @@
                     ></button
                 >
             </div>
-            <Avatar randomBgColorr name="Ola Nordman"  size="3rem"  />
-
+            <a href="/"><Avatar randomBgColorr name="Ola Nordman"  size="3rem"  />
+            </a>
         </div>
     </div>
 </header>
