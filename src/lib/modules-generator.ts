@@ -1,4 +1,4 @@
-import { addRndOptions, generate } from "$lib/question-utils";;
+import { addRndOptions, generate } from "$lib/question-utils";
 import type { Question } from "$lib/types";
 
 export let emne: any;
@@ -29,14 +29,6 @@ function generateTableQuestions(base: number) {
   });
 }
 
-console.log("--->",`m${emne}`, )
-
-const  definition = {
-  title: `Module ${emne}`, //| Part66 Prøveeksamen
-  category: "modules",
-  slug: `m${emne}`,
-};
-
 
 
 const initialState = {
@@ -53,9 +45,27 @@ const initialState = {
   11: { unlocks: 20 },
   20: { unlocks: null },
 };
+let total_modules = 17
+let _modules: any[] = [];
+for (let i = 0; i < total_modules; i++) {
+  console.log("--->",`m${emne+1}`, )
 
-export const modules = generate({
-  definition,
-  initialState,
-  generateQuestions: generateTableQuestions,
-});
+  const  definition = {
+    title: `Module ${i+1}`, //| Part66 Prøveeksamen
+    category: `module${i+1}`,
+    slug: `m${i+1}`,
+  };
+
+
+  const module = generate({
+    definition,
+    initialState,
+    generateQuestions: generateTableQuestions,
+  });
+
+  _modules.push(module);
+}
+
+
+export {_modules}
+

@@ -13,10 +13,16 @@
     import { adds } from "./add/[n]/addQuestions.ts";
     import { tables } from "./table/[n]/tableQuestions.ts";
     import { modules } from "./m[nr]/[emne]/modulesQuestions.ts";
+    import {_modules} from "$lib/modules-generator.ts";
 
-    console.log("modules",modules)
+    //console.log("modules",modules)
    
-    let categories = [tables, adds, modules];
+    let categories = [modules];
+    _modules.forEach(module => {
+      // @ts-ignore
+      categories.push(module);
+    })
+
   
     onMount(() => {
       practiceStore.sync();

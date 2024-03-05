@@ -125,7 +125,20 @@
                 name: "Gassturbinmotor",
                 topics: ["algebra","brøk"]
             }
+        },
+        { 
+            16: {
+                name: "Gassturbinmotor",
+                topics: ["algebra","brøk"]
+            }
+        },
+        { 
+            17: {
+                name: "Gassturbinmotor",
+                topics: ["algebra","brøk"]
+            }
         }
+
     ];
 
   /**
