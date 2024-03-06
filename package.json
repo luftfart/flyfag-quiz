@@ -27,6 +27,7 @@
 		"@xstate/svelte": "^3.0.2",
 		"howler": "^2.2.4",
 		"lodash.merge": "^4.6.2",
+		"pocketbase": "^0.21.1",
 		"svelte-avatar": "^1.2.0",
 		"xstate": "^5.9.1"
 	}

@@ -16,7 +16,7 @@ const initialState = {
 };
 _modules.forEach(module => {
   // @ts-ignore
-  initialState[module.category] = module;  //specifies what come out of the store in public
+  initialState[module.category] = module.initialState;
 })
 
 //console.log('initialState:',initialState)

@@ -6,5 +6,5 @@
 </script>
 
 
-<!--Navbar></Navbar-->
+<Navbar></Navbar>
 <slot />

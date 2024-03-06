@@ -1,24 +1,36 @@
 <script>
 // @ts-nocheck
 
-  import { page } from "$app/stores";
-  
+
+import { page } from "$app/stores";
+
   // @ts-ignore
   import { onMount } from "svelte";
   import Game from "$lib/components/Game.svelte";
-  import { modules } from "./modulesQuestions";
+  //import { modules } from "./modulesQuestions";
 
-  
+  import { store } from "$lib/utils/stores";
 
-
-  /**
+   /**
      * @type {{ id: any; }}
      */
    // @ts-ignore
    export let challenge;
+   const n  = $page.params.emne;//page.params;
+   let moduleNr = $page.params.nr
+   
+   
+   const modules = $store[`module${moduleNr}`];
+   //console.log('modules->',moduleNr)
 
-    const n  = $page.params.emne;//page.params;
-    let moduleNr = $page.params.nr
+  
+
+
+
+  
+
+
+ 
     
     //console.log("challenge: ", $page);
 
@@ -187,7 +199,11 @@
 </svelte:head>
 
 <div class="card">
-  <h1>Module {moduleNr} {moduleData[moduleNr].name} -  {moduleData[moduleNr].topics[challenge.id]}</h1>
+
+  
+    <h1 class="p-2 mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl ">Module {moduleNr}: <span class="text-blue-600 dark:text-blue-500"> {moduleData[moduleNr].name} -  {moduleData[moduleNr].topics[challenge.id]}</span></h1>
+    <p class="p-2 w-1/2 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+
 
   <Game {challenge} />
 </div>

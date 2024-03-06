@@ -1,5 +1,6 @@
-import { addRndOptions, generate } from "$lib/question-utils";
+import { addRndOptions, mcqOptions, generate, generateMCQ } from "$lib/question-utils";
 import type { Question } from "$lib/types";
+import { pb, grabAttribute } from "./utils/api";
 
 export let emne: any;
 
@@ -8,17 +9,19 @@ emne = 1
 
 
 
-function generateTableQuestions(base: number) {
 
- 
+function generateTableQuestions(base: number) {
   const TOTAL = 10;
   const table: Question[] = [];
   for (let i = 1; i <= TOTAL; i++) {
+
     const question = {
       q: `${base} x ${i}`,
-      answer: base * i,
-      options: [base * i],
+      answer: base * i, //TODO given the true explanition. compress to short answer
+      options: [base * i], //TODO given true lengthy answer generate x(~two) answer options
     };
+  
+
     table.push(question);
   }
   return addRndOptions({
@@ -30,6 +33,56 @@ function generateTableQuestions(base: number) {
 }
 
 
+function generateMCQQuestions(module_q_objs: any) {
+    const table_name = 'flyfag_quiz'
+    const column_name = 'module'
+    const cell_name = `${module_q_objs}`
+    const TOTAL = module_q_objs.length;
+    const table: Question[] = [];
+
+
+  console.log("17:",module_q_objs);
+
+
+  if (module_q_objs && Array.isArray(module_q_objs)) {
+    console.log("module_q_objs:",module_q_objs,module_x_questions_set);
+
+
+      for (const module_q_obj of module_q_objs) {
+        // Add more properties as needed
+        const question = {
+          q: `${module_q_obj.question}`,
+          answer: module_q_obj.answer, //TODO given the true explanition. compress to short answer
+          options: [], //TODO given true lengthy answer generate x(~two) answer options
+        };
+      
+        table.push(question);
+
+
+      }
+    
+    
+
+  } else {
+    const question_ = {
+      q: `what is two born?`,
+      answer: 'egypt', //TODO given the true explanition. compress to short answer
+      options: [ 'egypt','ssf','asfga'], //TODO given true lengthy answer generate x(~two) answer options
+    };
+   
+    table.push(question_);
+
+  
+  }
+
+  
+  return mcqOptions({
+    table,
+    total: 3,
+    min: 1,
+    max: 3,
+  });
+}
 
 const initialState = {
   1: { unlocked: true, unlocks: 10 },
@@ -48,22 +101,27 @@ const initialState = {
 let total_modules = 17
 let _modules: any[] = [];
 for (let i = 0; i < total_modules; i++) {
-  console.log("--->",`m${emne+1}`, )
+  //console.log("--->",`m${emne+1}`, )
+  
+  const module_id = i+1
 
   const  definition = {
-    title: `Module ${i+1}`, //| Part66 Prøveeksamen
-    category: `module${i+1}`,
-    slug: `m${i+1}`,
+    title: `Module ${module_id}`, //| Part66 Prøveeksamen
+    category: `module${module_id}`,
+    slug: `m${module_id}`,
   };
 
 
-  const module = generate({
+
+  const module = generateMCQ({
+    module_id,
     definition,
     initialState,
-    generateQuestions: generateTableQuestions,
+    generateMCQQuestions: generateMCQQuestions,
   });
 
   _modules.push(module);
+  //console.log('module:',module)
 }
 
 

@@ -52,6 +52,8 @@
     <!-- Meta Tags Generated with https://metatags.io -->
   </svelte:head>
   
+
+  <!-- TODO ability to pin most desired modules -->
   <Page reverse>
     <VisuallyHidden>
       <h1>Categories</h1>
