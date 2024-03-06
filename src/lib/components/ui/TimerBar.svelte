@@ -1,7 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte";
 
-  export let duration: null = null;
+  export let duration: any;
   export let showTimer = false;
 
   let timedOut = false;

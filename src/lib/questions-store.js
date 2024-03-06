@@ -24,24 +24,17 @@ _modules.forEach(module => {
 function createStore() {
   const KEY = "tafels-app-v9";
 
-  const { subscribe, update } = writable(initialState);
+  const modules_data = writable(initialState);
 
-  useLocalStorage({ subscribe, update, key: KEY });
 
-  return {
-    subscribe,
-    complete: ({ category, challenge }) =>
-      update((state) => {
-        state[category][challenge].completed = true;
-        return state;
-      }),
-    unlockNext: ({ category, challenge }) =>
-      update((state) => {
-        const current = state[category][challenge];
-        if (current.unlocks) state[category][current.unlocks].unlocked = true;
-        return state;
-      }),
-  };
+  return modules_data;
 }
 
 export const store = createStore();
+
+export const completeChallenge = (/** @type {string} */ category, /** @type {string} */ challenge) => {
+  store.update((completions) => [
+    ...completions,
+    { category, challenge },
+  ]);
+};

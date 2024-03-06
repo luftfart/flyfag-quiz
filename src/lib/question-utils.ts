@@ -96,20 +96,20 @@ export function generate({
 }
 
 
-export  function generateMCQ({
+export async  function generateMCQ({
   module_id,
   definition,
   initialState,
   generateMCQQuestions,
 }: GenerateMCQ) {
   const challenges: { [key: string]: any } = {};
-  const qs = generateMCQQuestions(GetMCQ(module_id)); //GetMCQ(module_id)
+  //const qs = generateMCQQuestions(GetMCQ(module_id)); //GetMCQ(module_id)
 
   challenges[0] = {
     ...definition,
     ...initialState[0],
     id: 0,
-    questions: qs
+    questions: generateMCQQuestions(await GetMCQ(module_id))
 
    
       // Example usage:
@@ -129,9 +129,9 @@ async function GetMCQ(module_id: any) {
     'flyfag_quiz',
     'module',
     `${module_id}`,
-    'id'
+    `${module_id}`,//'id'
   );
-  console.log("GetMCQ->", module_x_questions_set, module_id);
-  return module_x_questions_set;
+  console.log("GetMCQ->", module_x_questions_set.data, module_id);
+  return module_x_questions_set.data;
 
 }

@@ -34,28 +34,28 @@ function generateTableQuestions(base: number) {
 
 
 function generateMCQQuestions(module_q_objs: any) {
+
+    module_q_objs =  module_q_objs;
+    //module_q_objs = module_q_objs;
     const table_name = 'flyfag_quiz'
     const column_name = 'module'
     const cell_name = `${module_q_objs}`
-    const TOTAL = module_q_objs.length;
+
+    console.log("module_q_objs:",module_q_objs);
+
     const table: Question[] = [];
 
 
-  console.log("17:",module_q_objs);
-
-
   if (module_q_objs && Array.isArray(module_q_objs)) {
-    console.log("module_q_objs:",module_q_objs,module_x_questions_set);
-
 
       for (const module_q_obj of module_q_objs) {
-        // Add more properties as needed
         const question = {
           q: `${module_q_obj.question}`,
           answer: module_q_obj.answer, //TODO given the true explanition. compress to short answer
-          options: [], //TODO given true lengthy answer generate x(~two) answer options
+          options: [module_q_obj.answer,"placebo", "jack"], //TODO given true lengthy answer generate x(~two) answer options
         };
       
+        console.log("-q_obj->",question);
         table.push(question);
 
 
@@ -113,7 +113,7 @@ for (let i = 0; i < total_modules; i++) {
 
 
 
-  const module = generateMCQ({
+  const module = await generateMCQ({
     module_id,
     definition,
     initialState,

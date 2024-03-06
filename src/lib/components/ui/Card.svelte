@@ -32,7 +32,9 @@
     margin: 3rem 1rem 0.5rem 1rem;
     padding: 0;
     box-shadow: var(--shadow-2);
-    width: 28rem;
+    width: fit-content;
+    text-align: left;
+    display: inline-block;
     min-height: 35rem;
   }
 

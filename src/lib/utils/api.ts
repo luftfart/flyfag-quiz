@@ -393,7 +393,8 @@ export async function grabAttribute(
 ) {
 	try {
 		const matching_items = await pb.collection(table_name).getList(1, 50, {
-			filter: `${column_name} ~ "${cell_name}"`
+			filter: `${column_name} ~ "${cell_name}"`,
+            requestKey: `${output_attribute}`
 		});
 
 		if (matching_items.items.length > 0) {

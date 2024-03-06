@@ -205,6 +205,6 @@ import { page } from "$app/stores";
     <p class="p-2 w-1/2 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
 
 
-  <Game {challenge} />
+  <Game {challenge} mode="mcq"/>
 </div>
 

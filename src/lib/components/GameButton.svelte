@@ -3,8 +3,8 @@
   import Button from "./ui/Button.svelte";
 
   export let i: number;
-  export let value: string;
-  export let expected: string;
+  export let value: any;
+  export let expected: any;
 
   const dispatch = createEventDispatcher();
 

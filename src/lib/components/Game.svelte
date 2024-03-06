@@ -10,12 +10,14 @@
   import GameReport from "./GameReport.svelte";
 
   import { nock, squakk, yeah } from "$lib/helpers/soundFx";
-  import { store } from "$lib/questions-store.js";
+  import { store, completeChallenge } from "$lib/questions-store.js";
   import { practiceStore } from "$lib/practice-store";
 
   export let challenge: Challenge;
   export let onWrong: (current: Question) => void = practiceStore.add;
   export let onCorrect: (current: Question) => void = () => {};
+  export let mode: any;
+  export let module_id: number;
 
   const DURATION = 20;
 
@@ -38,6 +40,7 @@
 
   $: if (isDone) {
     if (flawless) {
+      //TODO make store use sveltekit or index it like this: [`module${module_id}`]
       store.complete({
         category: challenge.category,
         challenge: challenge.id,
@@ -91,22 +94,40 @@
       <span slot="progress">
         <TimerBar duration={DURATION} on:timeout={handleTimeout} {showTimer} />
       </span>
-      <h1 class="text-4xl m-5 p-0 mt-16 font-bold" slot="header">
-        {`${current.q} = ?`}
+      <h1 class="text-3xl m-2 p-0 mt-46 font-bold w-full" slot="header">
+        {`${current.q}`}
       </h1>
-      <Grid>
+      {#if mode == "mcq"}
+     
         {#each current.options as option, index (`${current.q}-${option}-${index}`)}
-          <GameButton
-            i={index}
-            expected={current.answer}
-            value={option}
-            on:correct={handleCorrect}
-            on:wrong={handleWrong}
-          >
-            {option}
-          </GameButton>
+          
+            <GameButton
+              i={index}
+              expected={current.answer}
+              value={option}
+              on:correct={handleCorrect}
+              on:wrong={handleWrong}
+            >
+            <div class="bg-blue-500 hover:bg-blue-700 p-1 m-2 rounded"> {option}</div>
+            </GameButton>
+          
         {/each}
-      </Grid>
+     
+      {:else}
+        <Grid>
+          {#each current.options as option, index (`${current.q}-${option}-${index}`)}
+            <GameButton
+              i={index}
+              expected={current.answer}
+              value={option}
+              on:correct={handleCorrect}
+              on:wrong={handleWrong}
+            >
+              {option}
+            </GameButton>
+          {/each}
+        </Grid>
+      {/if}
       <div slot="footer">
         <GameScore {results} />
       </div>
