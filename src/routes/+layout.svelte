@@ -5,7 +5,7 @@
 
 </script>
 <svelte:head>
-    <meta name="google-site-verification" content="2-LoIjwQDM5kwhPkjjflcHP9_z6bYmdPeAUPvaNqycg" />
+    <meta name="google-site-verification" content="u9OVdd8C6Nbe6pXvHpbQtctAl4Mmwp93WucGwY9yEgE" />
 </svelte:head>
 
 <Navbar></Navbar>
