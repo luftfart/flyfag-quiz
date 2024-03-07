@@ -113,6 +113,13 @@ for (let i = 0; i < total_modules; i++) {
 
 
 
+  const module =   mc_main(module_id,definition,initialState);
+
+  _modules.push(module);
+  //console.log('module:',module)
+}
+
+async function mc_main(module_id: any, definition: any, initialState: any) {
   const module = await generateMCQ({
     module_id,
     definition,
@@ -120,8 +127,8 @@ for (let i = 0; i < total_modules; i++) {
     generateMCQQuestions: generateMCQQuestions,
   });
 
-  _modules.push(module);
-  //console.log('module:',module)
+  return module
+
 }
 
 
