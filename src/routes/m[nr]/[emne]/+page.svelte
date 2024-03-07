@@ -202,7 +202,7 @@ import { page } from "$app/stores";
 
   
     <h1 class="p-2 mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl ">Module {moduleNr}: <span class="text-blue-600 dark:text-blue-500"> {moduleData[moduleNr].name} -  {moduleData[moduleNr].topics[challenge.id]}</span></h1>
-    <p class="p-2 w-1/2 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+    <p class="p-2 lg:w-1/2 md:w-1/2 sm:w-full text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
 
 
   <Game {challenge} mode="mcq"/>

@@ -60,7 +60,7 @@
     </VisuallyHidden>
     {#each categories as category}
       <Card>
-        <h2 slot="header">{category.title}</h2>
+        <a href="{category.slug}/0" slot="header" class="underline "><h2 >{category.title}</h2></a>
         <Grid>
           {#each Object.entries($store[category.category]) as [n, challenge]}
             <ChallengeLink
