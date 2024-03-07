@@ -21,7 +21,7 @@ import { page } from "$app/stores";
    
    
    const modules = $store[`module${moduleNr}`];
-   //console.log('modules->',moduleNr)
+   console.log(`module${moduleNr}->`,modules,modules.challenges[n])
 
   
 

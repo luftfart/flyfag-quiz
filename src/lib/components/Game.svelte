@@ -10,7 +10,7 @@
   import GameReport from "./GameReport.svelte";
 
   import { nock, squakk, yeah } from "$lib/helpers/soundFx";
-  import { store, completeChallenge } from "$lib/questions-store.js";
+  import { store } from "$lib/questions-store.js";
   import { practiceStore } from "$lib/practice-store";
 
   export let challenge: Challenge;

@@ -32,9 +32,4 @@ function createStore() {
 
 export const store = createStore();
 
-export const completeChallenge = (/** @type {string} */ category, /** @type {string} */ challenge) => {
-  store.update((completions) => [
-    ...completions,
-    { category, challenge },
-  ]);
-};
+

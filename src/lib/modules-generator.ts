@@ -55,7 +55,7 @@ function generateMCQQuestions(module_q_objs: any) {
           options: [module_q_obj.answer,"placebo", "jack"], //TODO given true lengthy answer generate x(~two) answer options
         };
       
-        console.log("-q_obj->",question);
+        //console.log("-q_obj->",question);
         table.push(question);
 
 
@@ -113,13 +113,6 @@ for (let i = 0; i < total_modules; i++) {
 
 
 
-  const module =   mc_main(module_id,definition,initialState);
-
-  _modules.push(module);
-  //console.log('module:',module)
-}
-
-async function mc_main(module_id: any, definition: any, initialState: any) {
   const module = await generateMCQ({
     module_id,
     definition,
@@ -127,7 +120,10 @@ async function mc_main(module_id: any, definition: any, initialState: any) {
     generateMCQQuestions: generateMCQQuestions,
   });
 
-  return module
+  
+  _modules.push(module);
+  //console.log('module:',module)
+
 
 }
 
