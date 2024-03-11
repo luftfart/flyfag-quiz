@@ -448,21 +448,22 @@ export async function getAdsAndDeals() {
 
 // sitemap shit
 // function that generates the manga pages for the sitemap
-export const generateSiteUrl = async () => {
+export let generateSiteUrl = async () => {
 	const allUrls: any = [];
 	// you can also fetch all records at once via getFullList
-	const cities = await pb.collection('norway_city').getFullList({
+	const cities = await pb.collection('modules').getFullList({
 		sort: '-created'
 	});
 
 	if (cities) {
 		cities.forEach((city: any) => {
-			const url = `/søk/${city.name}`;
+			const url = `/m${city.nr}/0`;
 			allUrls.push({
 				url: url,
+				nr: city.nr,
 				image: city.img_link,
 				title: city.name,
-				description: `Sjekk bompenger & drivstoffprisen i ${city.name} nær deg!. en nettside lagd for ${city.resident}`
+				description: `M${city.nr} - ${city.name}: ${city.description}`
 			});
 		});
 	} else {
@@ -470,6 +471,8 @@ export const generateSiteUrl = async () => {
 	}
 	return allUrls;
 };
+
+
 export function escapeXml(string: string) {
 	return string
 		.replace(/&/g, '&amp;')
