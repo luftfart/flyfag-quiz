@@ -16,4 +16,5 @@
 </svelte:head>
 
 <Navbar></Navbar>
+<br/><br/><br/>
 <slot />
