@@ -463,7 +463,7 @@ export let generateSiteUrl = async () => {
 				nr: city.nr,
 				image: city.img_link,
 				title: city.name,
-				description: `M${city.nr} - ${city.name}: ${city.description}`
+				description: `M${city.nr} ${city.name}: ${city.description}`
 			});
 		});
 	} else {

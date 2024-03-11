@@ -37,7 +37,7 @@ const render = async (originUrl: string): Promise<string> =>
 											encodeURIComponent(singleUrl.description)
 										)}</image:caption>
                     <image:geo_location>Norway</image:geo_location>
-                    <image:title>M${singleUrl.nr} - ${escapeXml(encodeURIComponent(singleUrl.title))} Prøveeksamen</image:title>
+                    <image:title>M${singleUrl.nr} ${escapeXml(encodeURIComponent(singleUrl.title))} - Prøveeksamen</image:title>
                   </image:image>
                   `
 									}
