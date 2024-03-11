@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Avatar from "svelte-avatar";
   import type { Question } from "$lib/types";
   import Page from "$lib/components/ui/Page.svelte";
   import Card from "$lib/components/ui/Card.svelte";
@@ -17,17 +18,15 @@
 
 <Page>
   <Card>
-    <img
-      class="object-contain w-full pb-8"
-      src={`.netlify/functions/bigheads/?seed=${$accountStore.name}`}
-      alt={$accountStore.name}
-    />
+   
+    <Avatar class="object-contain w-full pb-9"  name={$accountStore.name} src="https://avatars0.githubusercontent.com/u/6810985?s=460&u=a2a24f33ad8d17377cef8163f596a7fbd1501cd4&v=4" />
+
     <div slot="footer" class="m-8">
       <label
         class="block text-gray-700 text-lg font-bold mb-2 center"
         for="name"
       >
-        Your name
+        Navnet ditt er:
       </label>
       <input
         id="name"
