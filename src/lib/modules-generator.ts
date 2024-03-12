@@ -1,8 +1,5 @@
 import { addRndOptions, mcqOptions, generate, generateMCQ } from "$lib/question-utils";
 import type { Question } from "$lib/types";
-import { pb, grabAttribute } from "./utils/api";
-import { store } from "$lib/utils/stores";
-
 export let emne: any;
 
 

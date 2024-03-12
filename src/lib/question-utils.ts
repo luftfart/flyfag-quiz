@@ -131,7 +131,7 @@ async function GetMCQ(module_id: any) {
     `${module_id}`,
     `${module_id}`,//'id'
   );
-  //console.log("GetMCQ->", module_x_questions_set.data, module_id);
+  console.log("GetMCQ->", module_x_questions_set.data, module_id);
   return module_x_questions_set.data;
 
 }
