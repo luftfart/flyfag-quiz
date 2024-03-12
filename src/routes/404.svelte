@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>tafels.app - oops, page not found</title>
+  <title>flyfagquiz - oops, page not found</title>
 </svelte:head>
 
 <Page>

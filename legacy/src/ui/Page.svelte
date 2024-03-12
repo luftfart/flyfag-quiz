@@ -18,7 +18,7 @@
     <a href="https://koenvangilst.nl">Koen van Gilst</a>
     <br />
     Source code on
-    <a href="https://github.com/vnglst/tafels.app">Github</a>
+    <a href="https://github.com/vnglst/flyfagquiz">Github</a>
     <br />
     v. {process.env.APP_VERSION} git {process.env.COMMIT_HASH}
   </footer>

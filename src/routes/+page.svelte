@@ -53,6 +53,7 @@
   </svelte:head>
   
 <main class="w-full" data-sveltekit-reload>
+  🚧 Arbeid pågår 🚧
   <!-- TODO ability to pin most desired modules -->
   <Page reverse>
     <VisuallyHidden>

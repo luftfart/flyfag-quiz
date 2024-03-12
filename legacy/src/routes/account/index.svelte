@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-  <title>Account - tafels.app</title>
+  <title>Account - flyfagquiz</title>
 </svelte:head>
 
 <Page>
@@ -63,7 +63,7 @@
     <h2 slot="header" class="m-8 text-4xl">About</h2>
     <div class="p-10 text-lg text-center">
       <p>
-        Tafels.app was created by
+        Flyfagquiz was created by
         <a href="https://koenvangilst.nl">Koen van Gilst</a>
         using Sapper and Svelte.
       </p>
@@ -84,7 +84,7 @@
 
       <p class="my-4">🚧 Work in Progress 🚧</p>
       <p>
-        <a href="https://github.com/vnglst/tafels.app">Source code on Github</a>
+        <a href="https://github.com/vnglst/flyfagquiz">Source code on Github</a>
       </p>
     </div>
     <div slot="footer" class="p-5 text-center bg-red-100 rounded-b-lg">

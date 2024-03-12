@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-  <title>Practice today's questions - tafels.app</title>
+  <title>Practice today's questions - flyfagquiz</title>
 </svelte:head>
 
 <Game

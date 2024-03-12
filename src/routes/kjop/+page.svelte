@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-  <title>Account - tafels.app</title>
+  <title>Account - flyfagquiz</title>
 </svelte:head>
 
 <Page>
@@ -31,7 +31,7 @@
       <input
         id="name"
         type="text"
-        class="text-2xl p-4 font-bold text-center bg-white focus:outline-none
+        class="text-2xl p-4 font-bold text-center bg-white text-black focus:outline-none
         focus:shadow-outline border border-gray-300 py-2 px-4 block w-full
         appearance-none leading-normal rounded-full"
         bind:value={$accountStore.name}
@@ -59,14 +59,12 @@
     </div>
   </Card>
   <Card>
-    <h2 slot="header" class="m-8 text-4xl">About</h2>
+    <h2 slot="header" class="m-8 text-4xl">Om</h2>
     <div class="p-10 text-lg text-center">
       <p>
-        Tafels.app was created by
-        <a href="https://koenvangilst.nl">Koen van Gilst</a>
-        using Sapper and Svelte.
+        Flyfagquiz er laget  for å øve på modulene, når du har ledig tid
       </p>
-      <p class="mt-2">
+      <!--p class="mt-2">
         The avatars are from
         <a href="https://bigheads.io" target="_blank">bigheads.io</a>
         made by
@@ -79,12 +77,13 @@
             alt="Buy Me A Coffee"
           />
         </a>
-      </div>
+      </div-->
 
-      <p class="my-4">🚧 Work in Progress 🚧</p>
-      <p>
-        <a href="https://github.com/vnglst/tafels.app">Source code on Github</a>
-      </p>
+      <p class="my-4">🚧 Arbeid pågår 🚧</p>
+
+      <!--p>
+        <a href="https://github.com/luftfart/flyfagquiz">Kildekode på Github</a>
+      </p-->
     </div>
     <div slot="footer" class="p-5 text-center bg-red-100 rounded-b-lg">
       <button
@@ -98,7 +97,7 @@
           }
         }}
       >
-        Reset progress
+        Nullstill framgangen <!---->
       </button>
     </div>
   </Card>

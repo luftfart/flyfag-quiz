@@ -15,7 +15,7 @@
 </script>
 
 <svelte:head>
-  <title>Subtractions {challenge.id} - tafels.app</title>
+  <title>Subtractions {challenge.id} - flyfagquiz</title>
 </svelte:head>
 
 <Game {challenge} />

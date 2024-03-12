@@ -1,6 +1,6 @@
 {
-  "name": "tafels.app",
-  "short_name": "tafels.app",
+  "name": "flyfagquiz",
+  "short_name": "flyfagquiz",
   "theme_color": "white",
   "background_color": "#102a42",
   "display": "standalone",

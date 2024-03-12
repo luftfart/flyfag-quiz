@@ -34,7 +34,7 @@
 </script>
 
 <svelte:head>
-  <title>Tables {challenge.id} - tafels.app</title>
+  <title>Tables {challenge.id} - flyfagquiz</title>
 </svelte:head>
 
 
