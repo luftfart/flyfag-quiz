@@ -230,11 +230,11 @@ export let repository = [
 
 ];
 
-/*
+
 export const completeChallenge = (category: any, challenge: any) => {
     store.update((completions) => [
       ...completions,
       { category, challenge },
     ]);
-};*/
+};
 
