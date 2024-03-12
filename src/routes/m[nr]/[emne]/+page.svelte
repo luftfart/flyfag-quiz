@@ -9,7 +9,7 @@ import { page } from "$app/stores";
   import Game from "$lib/components/Game.svelte";
   //import { modules } from "./modulesQuestions";
 
-  import { store, repository } from "$lib/utils/stores";
+  import { store } from "$lib/utils/stores";
 
 
    /**
@@ -23,6 +23,115 @@ import { page } from "$app/stores";
    
    const modules = $store[`module${moduleNr}`];
    console.log(`module${moduleNr}->`,modules,modules.challenges[n])
+
+
+
+  let repository = [
+	{ 
+		1: {
+			name: "Matematikk",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		2: {
+			name: "Fysikk",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		3: {
+			name: "Elektro",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		4: {
+			name: "Elektronikklære",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		5: {
+			name: "Digitalteknikk el. Instrumenter",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		6: {
+			name: " Materiallære",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		7: {
+			name: "Vedlikeholdsteknikk",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		8: {
+			name: "Aerodynamikk",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		9: {
+			name: "Human Factors",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		10: {
+			name: "Lover og bestemmelser",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		11: {
+			name: "Luftfartøylære",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		12: {
+			name: "HASS",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		13: {
+			name: "LASS",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		14: {
+			name: "Motorfremdrift",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	
+	{ 
+		15: {
+			name: "GASS",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		16: {
+			name: "Stempelmotor",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		17: {
+			name: "Propeller",
+			topics: ["intro","prøveeksamen"]
+		}
+	}
+
+];
 
   
 
