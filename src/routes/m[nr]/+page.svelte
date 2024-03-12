@@ -30,7 +30,7 @@
         },
         { 
             5: {
-                name: "Digitalteknikk el. Instrumenter"
+                name: "Digitalteknikk"
             }
         },
         { 

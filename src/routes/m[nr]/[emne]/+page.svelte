@@ -53,7 +53,7 @@ import { page } from "$app/stores";
 	},
 	{ 
 		5: {
-			name: "Digitalteknikk el. Instrumenter",
+			name: "Digitalteknikk",
 			topics: ["intro","prøveeksamen"]
 		}
 	},

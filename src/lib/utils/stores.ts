@@ -150,7 +150,7 @@ export let repository = [
 	},
 	{ 
 		5: {
-			name: "Digitalteknikk el. Instrumenter",
+			name: "Digitalteknikk",
 			topics: ["intro","prøveeksamen"]
 		}
 	},
