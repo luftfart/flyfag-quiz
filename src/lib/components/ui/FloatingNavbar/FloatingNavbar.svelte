@@ -1,4 +1,11 @@
 <script >
+       import {Sun, Moon} from "lucide-svelte";
+       // @ts-ignore
+       import { Button } from "$lib/components/ui/button/index.ts";
+  
+ 
+  import { toggleMode } from "mode-watcher";
+
 import { Motion, AnimatePresence, useViewportScroll, useMotionValue } from "svelte-motion";
     import { cn } from "$lib/utils/cn";
     /**
@@ -30,7 +37,7 @@ import { Motion, AnimatePresence, useViewportScroll, useMotionValue } from "svel
             <div
                 use:motion
                 class={cn(
-                    'fixed inset-x-0 sm:w-full top-2 z-[5000] mx-auto flex max-w-fit items-center justify-center space-x-4 rounded-full border border-transparent bg-white py-2 pl-8 pr-2  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:border-white/[0.2] dark:bg-black',
+                    'fixed inset-x-0 sm:w-full top-2 z-[5000] mx-auto flex max-w-fit items-center justify-center space-x-4 rounded-full border border-transparent bg-white py-2 pl-8 pr-2  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:border-white/[0.2] ',
                     className
                 )}
             >
@@ -73,6 +80,17 @@ import { Motion, AnimatePresence, useViewportScroll, useMotionValue } from "svel
                         class="absolute inset-x-0 -bottom-px mx-auto h-px w-1/2 bg-gradient-to-r from-transparent via-blue-500 to-transparent"
                     />
                 </button>
+                
+                <Button on:click={toggleMode} class="p-2" variant="outline" size="icon">
+                    <Sun
+                    class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-black"
+                    />
+                    <Moon
+                    class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-black"
+                    />
+                    <span class="sr-only">Toggle theme</span>
+                </Button>
+          
             </div>
         </Motion>
     </AnimatePresence>

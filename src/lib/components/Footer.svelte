@@ -10,9 +10,9 @@
 </script>
 
 <!-- component -->
-<div class="flex items-end w-full  bg-white ">
+<div class="flex items-end w-full  bg-foreground ">
 
-    <footer class="w-full text-gray-700 bg-gray-100 body-font  bottom-0">
+    <footer class="w-full text-gray-700 bg-foreground body-font  bottom-0">
         <div
             class="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
             <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">

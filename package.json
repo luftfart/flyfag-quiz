@@ -26,14 +26,17 @@
 	"type": "module",
 	"dependencies": {
 		"@xstate/svelte": "^3.0.2",
+		"bits-ui": "^0.19.6",
 		"clsx": "^2.1.0",
 		"howler": "^2.2.4",
 		"lodash.merge": "^4.6.2",
 		"lucide-svelte": "^0.356.0",
+		"mode-watcher": "^0.2.2",
 		"pocketbase": "^0.21.1",
 		"svelte-avatar": "^1.2.0",
 		"svelte-motion": "^0.12.2",
 		"tailwind-merge": "^2.2.1",
+		"tailwind-variants": "^0.2.0",
 		"xstate": "^5.9.1"
 	}
 }

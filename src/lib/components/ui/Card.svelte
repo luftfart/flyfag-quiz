@@ -2,7 +2,7 @@
   export let progress = null;
 </script>
 
-<div class="card">
+<div class="card bg-primary">
   <slot name="progress">
     {#if progress !== null}
       <div
@@ -26,7 +26,6 @@
     border-top: 10px solid var(--blue-050);
     display: flex;
     flex-direction: column;
-    background-color: var(--white);
     color: var(--grey-900);
     border-radius: 10px;
     margin: 3rem 1rem 0.5rem 1rem;

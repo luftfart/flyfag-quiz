@@ -3,6 +3,8 @@
     import Footer from "$lib/components/Footer.svelte";
     import Navbar from "$lib/components/Navbar.svelte";
 
+  import { ModeWatcher } from "mode-watcher";
+
 </script>
 <svelte:head>
     <meta name="google-site-verification" content="u9OVdd8C6Nbe6pXvHpbQtctAl4Mmwp93WucGwY9yEgE" />
@@ -17,4 +19,6 @@
 
 <Navbar></Navbar>
 <br/><br/><br/>
+<ModeWatcher />
+
 <slot />
