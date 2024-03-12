@@ -1,7 +1,7 @@
 import { addRndOptions, mcqOptions, generate, generateMCQ } from "$lib/question-utils";
 import type { Question } from "$lib/types";
 import { pb, grabAttribute } from "./utils/api";
-import { repository } from "$lib/utils/stores";
+import { store } from "$lib/utils/stores";
 
 export let emne: any;
 
@@ -9,6 +9,112 @@ export let emne: any;
 emne = 1
 
 
+let repository = [
+	{ 
+		1: {
+			name: "Matematikk",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		2: {
+			name: "Fysikk",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		3: {
+			name: "Elektro",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		4: {
+			name: "Elektronikklære",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		5: {
+			name: "Digitalteknikk el. Instrumenter",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		6: {
+			name: " Materiallære",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		7: {
+			name: "Vedlikeholdsteknikk",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		8: {
+			name: "Aerodynamikk",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		9: {
+			name: "Human Factors",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		10: {
+			name: "Lover og bestemmelser",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		11: {
+			name: "Luftfartøylære",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		12: {
+			name: "HASS",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		13: {
+			name: "LASS",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		14: {
+			name: "Motorfremdrift",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	
+	{ 
+		15: {
+			name: "GASS",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		16: {
+			name: "Stempelmotor",
+			topics: ["intro","prøveeksamen"]
+		}
+	},
+	{ 
+		17: {
+			name: "Propeller",
+			topics: ["intro","prøveeksamen"]
+		}
+	}
+
+];
 
 
 function generateTableQuestions(base: number) {
@@ -107,12 +213,13 @@ for (let i = 0; i < total_modules; i++) {
   const module_id = Number(i+1)
 
   let moduleData = (repository.find(item => item[module_id]) as any)[module_id];
-
+  
   const  definition = {
     title: `M${module_id} ${moduleData.name}`, //| Part66 Prøveeksamen
     category: `module${module_id}`,
     slug: `m${module_id}`,
   };
+
 
 
 
