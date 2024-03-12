@@ -52,7 +52,7 @@
     <!-- Meta Tags Generated with https://metatags.io -->
   </svelte:head>
   
-
+<main class="w-full" data-sveltekit-reload>
   <!-- TODO ability to pin most desired modules -->
   <Page reverse>
     <VisuallyHidden>
@@ -97,7 +97,7 @@
       </Grid>
     </Card>
   </Page>
-  
+</main>
   <style>
     h2 {
       margin: 0;

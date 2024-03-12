@@ -31,7 +31,7 @@
       <input
         id="name"
         type="text"
-        class="text-2xl p-4 font-bold text-center bg-white focus:outline-none
+        class="text-2xl p-4 font-bold text-center bg-white text-black focus:outline-none
         focus:shadow-outline border border-gray-300 py-2 px-4 block w-full
         appearance-none leading-normal rounded-full"
         bind:value={$accountStore.name}
