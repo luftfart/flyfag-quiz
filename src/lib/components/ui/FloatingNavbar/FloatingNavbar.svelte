@@ -65,9 +65,9 @@ import { Motion, AnimatePresence, useViewportScroll, useMotionValue } from "svel
                     >
                         <svelte:component
                             this={navItem.icon}
-                            class="block h-4 w-4 text-neutral-500 dark:text-white sm:hidden"
+                            class="block h-4 w-4 text-black dark:text-white sm:hidden"
                         />
-                        <span class="hidden block h-4 w-4  sm:block text-neutral-500 dark:text-white sm:hidden "
+                        <span class="hidden block h-4 w-4  sm:block text-black  dark:text-white sm:hidden "
                             >{navItem.name}</span
                         >
                         <span class="hidden text-sm sm:block">{navItem.name}</span>
