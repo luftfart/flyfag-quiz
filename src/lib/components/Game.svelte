@@ -17,7 +17,7 @@
   export let onWrong: (current: Question) => void = practiceStore.add;
   export let onCorrect: (current: Question) => void = () => {};
   export let mode: any;
-  export let module_id: number;
+  //export let module_id: number;
 
   const DURATION = 20;
 

@@ -52,7 +52,7 @@
     <!-- Meta Tags Generated with https://metatags.io -->
   </svelte:head>
   
-<main class="w-full" data-sveltekit-reload>
+<main class="w-full" >
   🚧 Arbeid pågår 🚧
   <!-- TODO ability to pin most desired modules -->
   <Page reverse>
