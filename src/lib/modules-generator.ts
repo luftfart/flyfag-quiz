@@ -1,6 +1,7 @@
 import { addRndOptions, mcqOptions, generate, generateMCQ } from "$lib/question-utils";
 import type { Question } from "$lib/types";
 import { pb, grabAttribute } from "./utils/api";
+import { repository } from "$lib/utils/stores";
 
 export let emne: any;
 
@@ -103,10 +104,12 @@ let _modules: any[] = [];
 for (let i = 0; i < total_modules; i++) {
   //console.log("--->",`m${emne+1}`, )
   
-  const module_id = i+1
+  const module_id = Number(i+1)
+
+  let moduleData = (repository.find(item => item[module_id]) as any)[module_id];
 
   const  definition = {
-    title: `Module ${module_id}`, //| Part66 Prøveeksamen
+    title: `M${module_id} ${moduleData.name}`, //| Part66 Prøveeksamen
     category: `module${module_id}`,
     slug: `m${module_id}`,
   };
