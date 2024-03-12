@@ -121,12 +121,6 @@ export const authStore = writable(null);
 export const theme = writable('lofi'); // Set the default theme here
 
 export { store };
-export const completeChallenge = (category: any, challenge: any) => {
-    store.update((completions) => [
-      ...completions,
-      { category, challenge },
-    ]);
-};
 
 
 export let repository = [
@@ -235,3 +229,12 @@ export let repository = [
 	}
 
 ];
+
+/*
+export const completeChallenge = (category: any, challenge: any) => {
+    store.update((completions) => [
+      ...completions,
+      { category, challenge },
+    ]);
+};*/
+
