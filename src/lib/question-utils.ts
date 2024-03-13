@@ -1,6 +1,6 @@
 import { rnd } from "./utils";
 import type { Question } from "./types";
-import { grabAttribute } from "$lib/utils/api";
+import { grabExactAttribute } from "$lib/utils/api";
 
 type AddRndOptions = {
   table: Question[];
@@ -125,7 +125,7 @@ export async  function generateMCQ({
 
 
 async function GetMCQ(module_id: any) {
-  const module_x_questions_set = await grabAttribute(
+  const module_x_questions_set = await grabExactAttribute(
     'flyfag_quiz',
     'module',
     `${module_id}`,

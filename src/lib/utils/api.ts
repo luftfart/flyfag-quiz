@@ -409,6 +409,31 @@ export async function grabAttribute(
 	}
 }
 
+export async function grabExactAttribute(
+	table_name: string,
+	column_name: string,
+	cell_name: string,
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	output_attribute: string
+) {
+	try {
+		const matching_items = await pb.collection(table_name).getList(1, 50, {
+			filter: `${column_name} = "${cell_name}"`,
+            requestKey: `${output_attribute}`
+		});
+
+		if (matching_items.items.length > 0) {
+			const attributeValue = matching_items.items;
+			return { data: attributeValue };
+		} else {
+			return { data: [] };
+		}
+	} catch (error) {
+		console.error('Error fetching data:', error);
+		return { data: [] };
+	}
+}
+
 export async function grabFoodAttribute(
 	table_name: string,
 	column_name: string,
