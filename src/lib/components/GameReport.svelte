@@ -25,7 +25,7 @@
       {#each questions as question, idx}
         {#if !results[idx]}
           <li>
-            {question.q} = {question.answer}
+            {@html question.q} = {@html question.answer}
             <span>
               <IconWrong />
             </span>

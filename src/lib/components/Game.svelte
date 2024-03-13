@@ -95,7 +95,7 @@
         <TimerBar duration={DURATION} on:timeout={handleTimeout} {showTimer} />
       </span>
       <h1 class="text-3xl m-2 p-0 mt-46 font-bold w-full" slot="header">
-        {`${current.q}`}
+        {@html current.q}
       </h1>
       {#if mode == "mcq"}
      
@@ -108,7 +108,7 @@
               on:correct={handleCorrect}
               on:wrong={handleWrong}
             >
-            <div class="bg-blue-500 hover:bg-blue-700 p-1 m-2 rounded"> {option}</div>
+            <div class="bg-blue-500 hover:bg-blue-700 p-1 m-2 rounded"> {@html option}</div>
             </GameButton>
           
         {/each}
@@ -123,7 +123,7 @@
               on:correct={handleCorrect}
               on:wrong={handleWrong}
             >
-              {option}
+              {@html option}
             </GameButton>
           {/each}
         </Grid>
