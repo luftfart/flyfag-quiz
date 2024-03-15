@@ -30,6 +30,7 @@ function createStore() {
   return modules_data;
 }
 
+export const _module_data = initialState
 export const store = createStore();
 
 

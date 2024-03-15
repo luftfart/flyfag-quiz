@@ -9,7 +9,7 @@ import { page } from "$app/stores";
   import Game from "$lib/components/Game.svelte";
   //import { modules } from "./modulesQuestions";
 
-  import { store } from "$lib/utils/stores";
+  import { store, _module_data } from "$lib/utils/stores";
 
 
    /**
@@ -19,9 +19,11 @@ import { page } from "$app/stores";
    export let challenge;
    const n  = $page.params.emne;//page.params;
    let moduleNr = $page.params.nr
+
+   console.log('_module_data:', _module_data)
    
    
-   const modules = $store[`module${moduleNr}`];
+   const modules =  _module_data[`module${moduleNr}`]; //$store[`module${moduleNr}`];
    console.log(`module${moduleNr}->`,modules,modules.challenges[n])
 
 
@@ -204,7 +206,7 @@ import { page } from "$app/stores";
 <main class="card w-full">
 
   
-    <h1 class="p-2 mb-4 text-2xl font-extrabold leading-none tracking-tight text-primary-900  md:text-4xl lg:text-5xl ">Module {moduleNr}: <span class="text-blue-600 dark:text-blue-500"> {moduleData[moduleNr].name} -  {moduleData[moduleNr].topics[challenge.id]}</span></h1>
+    <h1 class="p-2 mb-4 text-2xl font-extrabold leading-none tracking-tight text-primary-900  md:text-4xl lg:text-5xl ">M{moduleNr} <span class="text-blue-600 dark:text-blue-500"> {moduleData[moduleNr].name} -  {moduleData[moduleNr].topics[challenge.id]}</span></h1>
     <p class="p-2 lg:w-1/2 md:w-1/2 sm:w-full text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
         Dette er bare en liten demo, men flere spørsmåler kommer jo:), Jeg jobber hardt å få publisere disse. Om du har noen spørsmål, forespørsel eller vil være med arbeidet kontakt meg direkte på:
         <a href="mailto:scresyskedsmo@gmail.com" class="link underline text-blue">scresyskedsmo@gmail.com</a>
