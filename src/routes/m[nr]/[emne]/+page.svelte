@@ -20,11 +20,11 @@ import { page } from "$app/stores";
    const n  = $page.params.emne;//page.params;
    let moduleNr = $page.params.nr
 
-   console.log('_module_data:', _module_data)
+   //console.log('_module_data:', _module_data)
    
    
    const modules =  _module_data[`module${moduleNr}`]; //$store[`module${moduleNr}`];
-   console.log(`module${moduleNr}->`,modules,modules.challenges[n])
+   //console.log(`module${moduleNr}->`,modules,modules.challenges[n])
 
 
 
