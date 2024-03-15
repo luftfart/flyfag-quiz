@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 
-
+import { browser } from "$app/environment";
 import { page } from "$app/stores";
 
   // @ts-ignore
@@ -20,11 +20,27 @@ import { page } from "$app/stores";
    const n  = $page.params.emne;//page.params;
    let moduleNr = $page.params.nr
 
-   //console.log('_module_data:', _module_data)
+   console.log('_module_data:', _module_data)
+   let _modules =  get_modules();
+
+
+  
+    function get_modules(){
+	if (browser) {
+		_modules = JSON.parse(window.localStorage.getItem('demo'));
+		
+		console.log('store->', _modules)
+
+		return _modules
+
+
+	}
+   }
+
    
    
-   const modules =  _module_data[`module${moduleNr}`]; //$store[`module${moduleNr}`];
-   //console.log(`module${moduleNr}->`,modules,modules.challenges[n])
+   const modules =  _modules[`module${moduleNr}`]; //$store[`module${moduleNr}`];
+   console.log(`module${moduleNr}->`,modules,modules.challenges[n])
 
 
 
