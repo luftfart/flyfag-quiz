@@ -114,7 +114,7 @@
 
   //import { ModeWatcher } from "mode-watcher";
   import "carbon-components-svelte/css/all.css";
-  import { Home, MessageCircle, User, TicketPercent, Boxes, AArrowDown } from "lucide-svelte";
+  import { Settings2,Package,Home, MessageCircle, User, TicketPercent, Boxes, AArrowDown } from "lucide-svelte";
   
   import {
     Header,
@@ -176,7 +176,7 @@
   
   <SideNav bind:isOpen={isSideNavOpen} rail data-sveltekit-reload>
     <SideNavItems>
-      <SideNavLink icon={AArrowDown} text="Min side" href="/part66" isSelected />
+      <SideNavLink icon={Settings2} text="Min side" href="/part66" isSelected />
 
       <!--SideNavMenu icon={AArrowDown} text="Menu">
         <SideNavMenuItem href="/" text="Link 1" />
@@ -187,7 +187,7 @@
       
       {#each repository as item, index}
 
-      <SideNavLink icon={AArrowDown} text="M{index + 1} {Object.values(item)[0].name}" href="/m{index + 1}/0" />
+      <SideNavLink icon={Package} text="M{index + 1} {Object.values(item)[0].name}" href="/m{index + 1}/0" />
       {/each}
     </SideNavItems>
   </SideNav>
