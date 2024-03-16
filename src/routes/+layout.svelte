@@ -69,7 +69,7 @@
   
   <SideNav bind:isOpen={isSideNavOpen} rail>
     <SideNavItems>
-      <SideNavLink icon={AArrowDown} text="Min side" href="/" isSelected />
+      <SideNavLink icon={AArrowDown} text="Min side" href="/part66" isSelected />
 
       <!--SideNavMenu icon={AArrowDown} text="Menu">
         <SideNavMenuItem href="/" text="Link 1" />
