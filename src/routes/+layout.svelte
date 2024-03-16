@@ -4,6 +4,113 @@
     import "../app.css";
     import Footer from "$lib/components/Footer.svelte";
     import Navbar from "$lib/components/Navbar.svelte";
+    let repository = [
+      { 
+        1: {
+          name: "Matematikk",
+          topics: ["intro","prøveeksamen"]
+        }
+      },
+      { 
+        2: {
+          name: "Fysikk",
+          topics: ["intro","prøveeksamen"]
+        }
+      },
+      { 
+        3: {
+          name: "Elektro",
+          topics: ["intro","prøveeksamen"]
+        }
+      },
+      { 
+        4: {
+          name: "Elektronikklære",
+          topics: ["intro","prøveeksamen"]
+        }
+      },
+      { 
+        5: {
+          name: "Digitalteknikk",
+          topics: ["intro","prøveeksamen"]
+        }
+      },
+      { 
+        6: {
+          name: " Materiallære",
+          topics: ["intro","prøveeksamen"]
+        }
+      },
+      { 
+        7: {
+          name: "Vedlikeholdsteknikk",
+          topics: ["intro","prøveeksamen"]
+        }
+      },
+      { 
+        8: {
+          name: "Aerodynamikk",
+          topics: ["intro","prøveeksamen"]
+        }
+      },
+      { 
+        9: {
+          name: "Human Factors",
+          topics: ["intro","prøveeksamen"]
+        }
+      },
+      { 
+        10: {
+          name: "Lover og bestemmelser",
+          topics: ["intro","prøveeksamen"]
+        }
+      },
+      { 
+        11: {
+          name: "Luftfartøylære",
+          topics: ["intro","prøveeksamen"]
+        }
+      },
+      { 
+        12: {
+          name: "HASS",
+          topics: ["intro","prøveeksamen"]
+        }
+      },
+      { 
+        13: {
+          name: "LASS",
+          topics: ["intro","prøveeksamen"]
+        }
+      },
+      { 
+        14: {
+          name: "Motorfremdrift",
+          topics: ["intro","prøveeksamen"]
+        }
+      },
+      
+      { 
+        15: {
+          name: "GASS",
+          topics: ["intro","prøveeksamen"]
+        }
+      },
+      { 
+        16: {
+          name: "Stempelmotor",
+          topics: ["intro","prøveeksamen"]
+        }
+      },
+      { 
+        17: {
+          name: "Propeller",
+          topics: ["intro","prøveeksamen"]
+        }
+      }
+
+    ];
+
 
   //import { ModeWatcher } from "mode-watcher";
   import "carbon-components-svelte/css/all.css";
@@ -50,7 +157,7 @@
 
 
   
-  <Header company="Flyfagquiz" platformName=".no" bind:isSideNavOpen>
+  <Header company="Flyfagquiz" platformName=".no" href="/" bind:isSideNavOpen  data-sveltekit-reload>
     <svelte:fragment slot="skip-to-content">
       <SkipToContent />
     </svelte:fragment>
@@ -59,15 +166,15 @@
       <HeaderNavItem href="/kjop" text="Kom i gang" />
       <HeaderNavMenu text="Kurs">
         <HeaderNavItem href="/part66" text="Alle" />
-        <HeaderNavItem href="/m1/0" text="M1 Matte" />
-        <HeaderNavItem href="/m2/0" text="M2 Fysikk" />
-        <HeaderNavItem href="/m3/0" text="M3 Elektro" />
+        {#each repository as item, index}
+          <HeaderNavItem href="/m{index + 1}/0" text="M{index + 1} {Object.values(item)[0].name}" />
+        {/each}
       </HeaderNavMenu>
       <HeaderNavItem href="/account" text="Konto" />
     </HeaderNav>
   </Header>
   
-  <SideNav bind:isOpen={isSideNavOpen} rail>
+  <SideNav bind:isOpen={isSideNavOpen} rail data-sveltekit-reload>
     <SideNavItems>
       <SideNavLink icon={AArrowDown} text="Min side" href="/part66" isSelected />
 
@@ -77,8 +184,11 @@
         <SideNavMenuItem href="/" text="Link 3" />
       </SideNavMenu-->
       <SideNavDivider />
-      <SideNavLink icon={AArrowDown} text="M1 Matte" href="/m1/0" />
-      <SideNavLink icon={AArrowDown} text="M2 Fysikk" href="/m2/0" />
+      
+      {#each repository as item, index}
+
+      <SideNavLink icon={AArrowDown} text="M{index + 1} {Object.values(item)[0].name}" href="/m{index + 1}/0" />
+      {/each}
     </SideNavItems>
   </SideNav>
   
