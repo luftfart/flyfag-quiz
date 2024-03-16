@@ -3,7 +3,7 @@ import { browser } from "$app/environment";
 import { subtracts } from "../routes/subtract/[n]/subtractQuestions";
 import { adds } from "../routes/add/[n]/addQuestions";
 import { tables } from "../routes/table/[n]/tableQuestions";
-import { modules } from "../routes/m[nr]/[emne]/modulesQuestions";
+//import { modules } from "../routes/m[nr]/[emne]/modulesQuestions";
 import { _modules } from "./modules-generator";
 import { useLocalStorage } from "./store-hooks";
 
@@ -13,7 +13,7 @@ const initialState = {
   tables: tables.initialState,
   adds: adds.initialState,
   subtracts: subtracts.initialState,
-  modules: modules.initialState,
+  //modules: modules.initialState,
   practice: { today: {}, tomorrow: {}, nextWeek: {} },
 };
 _modules.forEach(module => {

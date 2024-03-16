@@ -12,7 +12,7 @@
     import { subtracts } from "./subtract/[n]/subtractQuestions.ts";
     import { adds } from "./add/[n]/addQuestions.ts";
     import { tables } from "./table/[n]/tableQuestions.ts";
-    import { modules } from "./m[nr]/[emne]/modulesQuestions.ts";
+    //import { modules } from "./m[nr]/[emne]/modulesQuestions.js";
     import {_modules} from "$lib/modules-generator.ts";
 
     //console.log("modules",modules)

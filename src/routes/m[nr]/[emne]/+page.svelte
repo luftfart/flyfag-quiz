@@ -20,12 +20,12 @@ import { page } from "$app/stores";
    const n  = $page.params.emne;//page.params;
    let moduleNr = $page.params.nr
 
-   console.log('_module_data:', _module_data)
+   /*console.log('_module_data:', _module_data)
    let _modules =  get_modules();
 
 
   
-    function get_modules(){
+   function get_modules(){
 	if (browser) {
 		_modules = JSON.parse(window.localStorage.getItem('demo'));
 		
@@ -35,11 +35,11 @@ import { page } from "$app/stores";
 
 
 	}
-   }
+   }*/
 
    
    
-   const modules =  _modules[`module${moduleNr}`]; //$store[`module${moduleNr}`];
+   const modules =  $store[`module${moduleNr}`]; //_modules[`module${moduleNr}`];
    console.log(`module${moduleNr}->`,modules,modules.challenges[n])
 
 
