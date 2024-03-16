@@ -7,7 +7,7 @@
         icon: Home
       },
       {
-        name: "Moduler",
+        name: "Part66",
         link: "/m15/0",
         icon: Boxes
       },
