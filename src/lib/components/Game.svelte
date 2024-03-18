@@ -19,7 +19,7 @@
   export let mode: any;
   //export let module_id: number;
 
-  const DURATION = 20;
+  const DURATION = 60;
 
   let total = challenge.questions.length;
   let results: boolean[] = new Array(total);

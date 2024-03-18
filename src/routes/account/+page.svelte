@@ -36,6 +36,14 @@
         appearance-none leading-normal rounded-full"
         bind:value={$accountStore.name}
       />
+
+      <br><br>
+      <!-- svelte-ignore a11y-label-has-associated-control -->
+      <label class="block text-gray-700 text-lg font-bold mb-2 center">Endre tid mellom hver spørsmål: 60 sek</label>
+      <input  value='60' class="shadow-outline border border-gray-300 py-2 px-4 block w-full
+      appearance-none leading-normal rounded-full" /> 
+      <small>* AUTO (standardinnstilling) vil regne akkurat riktig tid, akkurat som eksamen</small>
+  
     </div>
   </Card>
   <Card>

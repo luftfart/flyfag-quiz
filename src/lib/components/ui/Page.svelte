@@ -14,7 +14,7 @@
   <main>
     <slot />
   </main>
- <Footer {APP_VERSION} {COMMIT_HASH}></Footer>
+ <!--Footer {APP_VERSION} {COMMIT_HASH}></Footer-->
 </div>
 
 <style>
