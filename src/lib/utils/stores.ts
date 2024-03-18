@@ -1,7 +1,6 @@
 // stores.js
 import { writable } from 'svelte/store';
 import { PUBLIC_PB_URL } from '$env/static/public';
-import { store, _module_data  } from '$lib/questions-store';
 // Initial cart state
 
 const initialCart: any = [];
@@ -120,7 +119,6 @@ export const authStore = writable(null);
 
 export const theme = writable('lofi'); // Set the default theme here
 
-export { store, _module_data };
 
 
 export let repository = [

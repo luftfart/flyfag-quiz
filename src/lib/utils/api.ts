@@ -252,135 +252,28 @@ export async function processVippsPayment(data: any) {
 	}
 }
 
-type MealPlanRecord = {
-	collectionId: string;
-	collectionName: string;
-	created: Date;
-	id: string;
-	user: string;
-	week_nr: string;
-	cost: string;
-	actual_cost: string;
-	for: string;
-	collection_url: string;
-	monday_breakfast: Record<string, unknown>;
-	monday_lunch: Record<string, unknown>;
-	monday_dinner: Record<string, unknown>;
-	teusday_breakfast: Record<string, unknown>;
-	teusday_lunch: Record<string, unknown>;
-	teusday_dinner: Record<string, unknown>;
-	wednesday_breakfast: Record<string, unknown>;
-	wednesday_lunch: Record<string, unknown>;
-	wednesday_dinner: Record<string, unknown>;
-	thursday_breakfast: Record<string, unknown>;
-	thursday_lunch: Record<string, unknown>;
-	thursday_dinner: Record<string, unknown>;
-	friday_breakfast: Record<string, unknown>;
-	friday_lunch: Record<string, unknown>;
-	friday_dinner: Record<string, unknown>;
-	saturday_breakfast: Record<string, unknown>;
-	saturday_lunch: Record<string, unknown>;
-	saturday_dinner: Record<string, unknown>;
-	sunday_breakfast: Record<string, unknown>;
-	sunday_lunch: Record<string, unknown>;
-	sunday_dinner: Record<string, unknown>;
-	collection_image: string;
-	updated: Date;
-	expand: Record<string, unknown>;
-};
-
-let meals: MealPlanRecord[] = [];
-export async function GetMeals(plan_id: any) {
+export async function grabExactAttribute(
+	table_name: string,
+	column_name: string,
+	cell_name: string,
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	output_attribute: string
+) {
 	try {
-		const meal_events = [];
-
-		const meals_response = await pb.collection('meal_plans').getList(1, 50, {
-			filter: `id ~ "${plan_id}"`
+		const matching_items = await pb.collection(table_name).getList(1, 50, {
+			filter: `${column_name} = "${cell_name}"`,
+            requestKey: `${output_attribute}`
 		});
-		meals = meals_response.items as unknown as MealPlanRecord[];
 
-		// fetch one plan
-
-		// loop through the mealplans
-		for (let i = 0; i < meals.length; i++) {
-			const mealplan_data = meals[i];
-			const weekdays = [
-				'monday',
-				'teusday',
-				'wednesday',
-				'thursday',
-				'friday',
-				'saturday',
-				'sunday'
-			];
-			const meal_types = [
-				{ category: 'breakfast', start: ' 06:00', end: ' 09:45' },
-				{ category: 'lunch', start: ' 10:00', end: ' 12:45' },
-				{ category: 'dinner', start: ' 13:00', end: ' 18:00' }
-			];
-			for (let i = 0; i < weekdays.length; i++) {
-				const day = weekdays[i];
-				const mealplan_date = new Date(mealplan_data.start);
-				mealplan_date.setDate(mealplan_date.getDate() + i);
-				let dateString = mealplan_date.toISOString().slice(0, 10); // convert the Date object to a string and slice the first 16 characters
-				dateString = dateString.replace(/T/g, ' '); //
-				// loop every the day
-				for (let i = 0; i < meal_types.length; i++) {
-					// loop through 3 meals a day
-					const one_meal = day + `_${meal_types[i].category}`;
-					const one_meal_data = mealplan_data[one_meal];
-					let courses: ({ name: any; description: any; img: any; price: any; endpoint: string; apiData: RecordModel; } | { name: string; description: string; img: string; price: string; endpoint: string; apiData: {}; })[] = [];
-
-					if (Array.isArray(one_meal_data) && one_meal_data.length > 0) {
-						courses = await Promise.all(
-							one_meal_data.map(async (courseId) => {
-								const response = await pb.collection('recipes').getList(1, 50, {
-									filter: `id ~ "${courseId}"`
-								});
-								if (response.items.length > 0) {
-									const courseData = response.items[0];
-									return {
-										name: courseData.recipe_name,
-										description: courseData.category,
-										img: courseData.preview,
-										price: courseData.cost_per_serving,
-										endpoint: '/recipe/' + courseData.id,
-										apiData: courseData
-									};
-								}
-
-								return {
-									name: 'Unknown Course',
-									description: 'Course data not found',
-									img: `${PUBLIC_PB_URL}/api/files/n4sfebjxm43jxvc/vryx5af99g6nqrx/icon_image_not_found_free_vector_259BQHTtI2.jpg?token=`,
-									price: '0.00',
-									endpoint: '#',
-									apiData: {}
-								};
-							})
-						);
-					}
-					//console.log(one_meal);
-					const new_meal_event = {
-						day: one_meal, // REMOVE
-						courses: courses, // REMOVE
-						start: dateString + meal_types[i].start,
-						end: dateString + meal_types[i].end,
-						resourceId: 1,
-						title: `${one_meal_data}`,
-						//allDay: true,
-						//color: "#B29DD9",
-						display: 'background'
-					};
-
-					meal_events.push(new_meal_event);
-					//meal_events = [...meal_events, new_event, another_event];
-				}
-			}
+		if (matching_items.items.length > 0) {
+			const attributeValue = matching_items.items;
+			return { data: attributeValue };
+		} else {
+			return { data: [] };
 		}
-		return meal_events;
 	} catch (error) {
-		console.error('Error: could not fetch fuel stations', error);
+		console.error('Error fetching data:', error);
+		return { data: [] };
 	}
 }
 
@@ -409,30 +302,7 @@ export async function grabAttribute(
 	}
 }
 
-export async function grabExactAttribute(
-	table_name: string,
-	column_name: string,
-	cell_name: string,
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	output_attribute: string
-) {
-	try {
-		const matching_items = await pb.collection(table_name).getList(1, 50, {
-			filter: `${column_name} = "${cell_name}"`,
-            requestKey: `${output_attribute}`
-		});
 
-		if (matching_items.items.length > 0) {
-			const attributeValue = matching_items.items;
-			return { data: attributeValue };
-		} else {
-			return { data: [] };
-		}
-	} catch (error) {
-		console.error('Error fetching data:', error);
-		return { data: [] };
-	}
-}
 
 export async function grabFoodAttribute(
 	table_name: string,
