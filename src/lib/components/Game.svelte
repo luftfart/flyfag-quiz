@@ -1,4 +1,6 @@
 <script lang="ts">
+      import MathJax from "$lib/components/MathJax.svelte";
+
   import type { Question, Challenge } from "$lib/types";
   import Card from "./ui/Card.svelte";
   import TimerBar from "./ui/TimerBar.svelte";
@@ -95,7 +97,9 @@
         <TimerBar duration={DURATION} on:timeout={handleTimeout} {showTimer} />
       </span>
       <h1 class="text-3xl m-2 p-0 mt-46 font-bold w-full" slot="header">
-        {@html current.q}
+        <!--{@html current.q}-->
+        <MathJax math={ current.q}></MathJax>
+
       </h1>
       {#if mode == "mcq"}
      
@@ -108,7 +112,7 @@
               on:correct={handleCorrect}
               on:wrong={handleWrong}
             >
-            <div class="bg-blue-500 hover:bg-blue-700 p-1 m-2 rounded"> {@html option}</div>
+            <div class="bg-blue-500 hover:bg-blue-700 p-1 m-2 rounded"> <!--{@html option}--> <MathJax math={ option}></MathJax></div>
             </GameButton>
           
         {/each}

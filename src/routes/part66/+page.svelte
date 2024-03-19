@@ -25,8 +25,10 @@
     onMount(() => {
       practiceStore.sync();
     });
-    import { math, display } from 'mathlifier';
-    const allowBreak = math('e^{i\\pi} = -1', { wrap: true });
+
+    import MathJax from "$lib/components/MathJax.svelte";
+
+
 
 
   </script>
@@ -56,7 +58,9 @@
   
 <main class="w-full" >
   🚧 Arbeid pågår 🚧
-  {@html allowBreak}
+    <MathJax math={'\\( \\sqrt{11}\\).'}></MathJax>
+
+
   <!-- TODO ability to pin most desired modules -->
   <Page reverse>
     <VisuallyHidden>
