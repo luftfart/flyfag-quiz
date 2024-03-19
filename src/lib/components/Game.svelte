@@ -98,7 +98,8 @@
       </span>
       <h1 class="text-3xl m-2 p-0 mt-46 font-bold w-full" slot="header">
         <!--{@html current.q}-->
-        <MathJax math={ current.q}></MathJax>
+        <!--MathJax math={ current.q}></MathJax-->
+        {@html  current.q}
 
       </h1>
       {#if mode == "mcq"}
@@ -112,7 +113,7 @@
               on:correct={handleCorrect}
               on:wrong={handleWrong}
             >
-            <div class="bg-blue-500 hover:bg-blue-700 p-1 m-2 rounded"> <!--{@html option}--> <MathJax math={ option}></MathJax></div>
+            <div class="bg-blue-500 hover:bg-blue-700 p-1 m-2 rounded"> {@html option} <!--MathJax math={ option}></MathJax--></div>
             </GameButton>
           
         {/each}
