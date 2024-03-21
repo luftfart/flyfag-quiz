@@ -28,6 +28,7 @@
 	"dependencies": {
 		"@xstate/svelte": "^3.0.2",
 		"bits-ui": "^0.19.6",
+		"carbon-icons-svelte": "^12.6.0",
 		"clsx": "^2.1.0",
 		"howler": "^2.2.4",
 		"lodash.merge": "^4.6.2",

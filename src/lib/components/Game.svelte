@@ -92,7 +92,7 @@
 
 <Page>
   {#if current}
-    <Card>
+    <Card >
       <span slot="progress">
         <TimerBar duration={DURATION} on:timeout={handleTimeout} {showTimer} />
       </span>

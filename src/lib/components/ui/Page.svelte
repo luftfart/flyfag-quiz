@@ -8,7 +8,7 @@
 </script>
 
 <div
-  class="animated"
+  class="animated "
   transition:fly={{ x: reverse ? -200 : 200, duration: 100 }}
 >
   <main>
@@ -23,11 +23,7 @@
     width: 100vw;
   }
 
-  main {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+ 
 
   footer {
     color: var(--grey-300);

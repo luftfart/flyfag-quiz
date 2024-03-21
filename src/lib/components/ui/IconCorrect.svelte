@@ -10,7 +10,7 @@
   viewBox="0 0 24 24"
   class="icon-check"
 >
-  <circle fill="currentColor" cx="12" cy="12" r="10" class="primary" />
+  <circle fill="green" cx="12" cy="12" r="10" class="primary" />
   <path
     fill="currentColor"
     class="secondary"

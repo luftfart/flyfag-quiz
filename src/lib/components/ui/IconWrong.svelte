@@ -6,7 +6,7 @@
   viewBox="0 0 24 24"
   class="icon-close-circle"
 >
-  <circle fill="currentColor" cx="12" cy="12" r="10" class="primary" />
+  <circle fill="red" cx="12" cy="12" r="10" class="primary" />
   <path
     class="secondary"
     fill="currentColor"
