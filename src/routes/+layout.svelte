@@ -269,7 +269,7 @@
           <HeaderPanelDivider>Alle moduler:</HeaderPanelDivider>
           {#each repository as item, index}
 
-            <HeaderPanelLink href="/m{index + 1}/0" data-sveltekit-reload>M{index + 1} {Object.values(item)[0].name}</HeaderPanelLink>
+            <HeaderPanelLink href="/m{index + 1}/0">M{index + 1} {Object.values(item)[0].name}</HeaderPanelLink>
           {/each}
          
         </HeaderPanelLinks>
