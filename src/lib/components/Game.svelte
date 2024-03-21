@@ -6,6 +6,8 @@
   import TimerBar from "./ui/TimerBar.svelte";
   import Grid from "./ui/Grid.svelte";
   import Page from "./ui/Page.svelte";
+  import { ImageLoader } from "carbon-components-svelte";
+  import Image from "./ui/Image.svelte";
 
   import GameButton from "./GameButton.svelte";
   import GameScore from "./GameScore.svelte";
@@ -99,6 +101,9 @@
       <h1 class="text-3xl m-2 p-0 mt-46 font-bold w-full" slot="header">
         <!--{@html current.q}-->
         <!--MathJax math={ current.q}></MathJax-->
+ 
+        
+       
         {@html  current.q}
 
       </h1>

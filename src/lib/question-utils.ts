@@ -105,15 +105,16 @@ export async  function generateMCQ({
   const challenges: { [key: string]: any } = {};
   //const qs = generateMCQQuestions(GetMCQ(module_id)); //GetMCQ(module_id)
 
-  challenges[0] = {
-    ...definition,
-    ...initialState[0],
-    id: 0,
-    questions: generateMCQQuestions(await GetMCQ(module_id))
+  for (const n in initialState) {
+    challenges[n] = {
+      ...definition,
+      ...initialState[n],
+      id: n,
+      questions: generateMCQQuestions(await GetMCQ(module_id)),
+    };
+  }
 
-   
-      // Example usage:
-  };
+
   
 
   return {

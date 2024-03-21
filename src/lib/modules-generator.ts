@@ -189,7 +189,7 @@ function generateMCQQuestions(module_q_objs: any) {
 }
 
 const initialState = {
-  1: { unlocked: true, unlocks: 10 },
+  1: { unlocked: true, unlocks: 10},
   10: { unlocks: 2 },
   2: { unlocks: 5 },
   5: { unlocks: 3 },
