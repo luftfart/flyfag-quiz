@@ -167,26 +167,26 @@
 
   const data = [
     {
-      href: "/",
-      text: "Kubernetes Service",
+      href: "/m1/0",
+      text: "M1 Matematikk",
       description:
         "Deploy secure, highly available apps in a native Kubernetes experience. IBM Cloud Kubernetes Service creates a cluster of compute hosts and deploys highly available containers.",
     },
     {
-      href: "/",
-      text: "Red Hat OpenShift on IBM Cloud",
+      href: "/m2/0",
+      text: "M2 Fysikk",
       description:
         "Deploy and secure enterprise workloads on native OpenShift with developer focused tools to run highly available apps. OpenShift clusters build on Kubernetes container orchestration that offers consistency and flexibility in operations.",
     },
     {
-      href: "/",
-      text: "Container Registry",
+      href: "/m3/0",
+      text: "M3 Elektrolære",
       description:
         "Securely store container images and monitor their vulnerabilities in a private registry.",
     },
     {
-      href: "/",
-      text: "Code Engine",
+      href: "/m4/0",
+      text: "M4 Digitalteknikk",
       description:
         "Run your application, job, or container on a managed serverless platform.",
     },
@@ -246,7 +246,7 @@
         bind:active
         bind:value
         bind:selectedResultIndex
-        placeholder="Search services"
+        placeholder="Søk"
         {results}
         on:active={() => {
           events = [...events, { type: "active" }];
@@ -265,11 +265,11 @@
     </HeaderNav>
     <HeaderUtilities>
       <HeaderAction bind:isOpen transition={transitions[selected].value} >
-        <HeaderPanelLinks iconDescription="Kurs">
+        <HeaderPanelLinks iconDescription="Kurs" >
           <HeaderPanelDivider>Alle moduler:</HeaderPanelDivider>
           {#each repository as item, index}
 
-            <HeaderPanelLink href="/m{index + 1}/0">M{index + 1} {Object.values(item)[0].name}</HeaderPanelLink>
+            <HeaderPanelLink href="/m{index + 1}/0" data-sveltekit-replacestate>M{index + 1} {Object.values(item)[0].name}</HeaderPanelLink>
           {/each}
          
         </HeaderPanelLinks>

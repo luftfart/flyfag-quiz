@@ -14,6 +14,8 @@
   import { nock, squakk, yeah } from "$lib/helpers/soundFx";
   import { store } from "$lib/questions-store.js";
   import { practiceStore } from "$lib/practice-store";
+  import { marked } from "marked";
+
 
   export let challenge: Challenge;
   export let onWrong: (current: Question) => void = practiceStore.add;
@@ -99,7 +101,7 @@
       <h1 class="text-3xl m-2 p-0 mt-46 font-bold w-full" slot="header">
         <!--{@html current.q}-->
         <!--MathJax math={ current.q}></MathJax-->
-        {@html  current.q}
+        {@html  marked(current.q)}
 
       </h1>
       {#if mode == "mcq"}
@@ -113,7 +115,7 @@
               on:correct={handleCorrect}
               on:wrong={handleWrong}
             >
-            <div class="bg-blue-500 hover:bg-blue-700 p-1 m-2 rounded"> {@html option} <!--MathJax math={ option}></MathJax--></div>
+            <div class="bg-blue-500 hover:bg-blue-700 p-1 m-2 rounded"> {@html marked(option)} <!--MathJax math={ option}></MathJax--></div>
             </GameButton>
           
         {/each}
@@ -128,7 +130,7 @@
               on:correct={handleCorrect}
               on:wrong={handleWrong}
             >
-              {@html option}
+              {@html marked(option)}
             </GameButton>
           {/each}
         </Grid>

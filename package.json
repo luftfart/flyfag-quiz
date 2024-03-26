@@ -33,6 +33,7 @@
 		"howler": "^2.2.4",
 		"lodash.merge": "^4.6.2",
 		"lucide-svelte": "^0.356.0",
+		"marked": "^12.0.1",
 		"mathlifier": "^1.3.5",
 		"mode-watcher": "^0.2.2",
 		"pocketbase": "^0.21.1",
