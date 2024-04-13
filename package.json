@@ -26,6 +26,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@threlte/core": "^7.3.0",
+		"@threlte/extras": "^8.11.2",
+		"@threlte/flex": "^1.0.2",
 		"@xstate/svelte": "^3.0.2",
 		"bits-ui": "^0.19.6",
 		"carbon-icons-svelte": "^12.6.0",
@@ -34,13 +37,16 @@
 		"lodash.merge": "^4.6.2",
 		"lucide-svelte": "^0.356.0",
 		"marked": "^12.0.1",
+		"mathjs": "^12.4.1",
 		"mathlifier": "^1.3.5",
 		"mode-watcher": "^0.2.2",
+		"opentype.js": "^1.3.4",
 		"pocketbase": "^0.21.1",
 		"svelte-avatar": "^1.2.0",
 		"svelte-motion": "^0.12.2",
 		"tailwind-merge": "^2.2.1",
 		"tailwind-variants": "^0.2.0",
+		"three": "^0.163.0",
 		"xstate": "^5.9.1"
 	}
 }

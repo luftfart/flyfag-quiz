@@ -1,0 +1,2 @@
+<img src="https://raw.githubusercontent.com/flybywiresim/docs/primary/docs/pilots-corner/assets/a32nx-briefing/pedestal/console.jpg"><div class="imagemap" style="position: absolute; left: 2%; top: 68.5%; width: 24%; height: 10.5%;"><span class="imagemapname">Console Capt.</span></div>
+    <img src="https://raw.githubusercontent.com/flybywiresim/docs/primary/docs/pilots-corner/assets/a32nx-briefing/pedestal/console.jpg"><div class="imagemap" style="position: absolute; left: 74%; top: 68.5%; width: 24%; height: 10.5%;"><span class="imagemapname">Console F.O.</span></div>

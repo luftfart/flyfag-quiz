@@ -1,0 +1,14 @@
+<script>
+  import Front from "./Front.svelte";
+  import Glareshield from "./Glareshield.svelte";
+  import OvhdAft from "./Ovhd-aft.svelte";
+  import Ovhd from "./Ovhd.svelte";
+  import Pedestal from "./Pedestal.svelte";
+  import Console from "./Console.svelte";
+  import OvhdFr from "./Ovhd-fr.svelte";
+  import OvhdM from "./Ovhd-m.svelte";
+  import OvhdFl from "./Ovhd-fl.svelte";
+</script>
+
+<!-- Flight Instruments -->
+<Front instrument_color="#91a8c7"></Front>
