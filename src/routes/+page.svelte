@@ -2,7 +2,7 @@
         import { ImageLoader } from "carbon-components-svelte";
 </script>
 <h1>Velkommen</h1>
-<a href="/flight-deck" class="p-2">Orientering av flydekket</a>
+<a href="/flightdeck/deck" class="p-2">Orientering av flydekket</a>
 <ImageLoader
   src="https://media.defense.gov/2021/May/23/2002722447/2000/2000/0/210426-F-LW859-9007.JPG"
   class="w-1/2"
