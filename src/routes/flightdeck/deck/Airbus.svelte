@@ -12,3 +12,19 @@
 
 <!-- Flight Instruments -->
 <Front instrument_color="#91a8c7"></Front>
+<!-- OVHD AFT ->
+<OvhdAft></OvhdAft>
+<!-- OVHD FWD Left->
+<OvhdFl></OvhdFl>
+<!-- OVHD FWD Middle->
+<OvhdM></OvhdM>
+<!-- OVHD FWD Right->
+<OvhdFr></OvhdFr>
+<!-- Glareshield ->
+<Glareshield></Glareshield>
+<!-- Flight Instruments ->
+<Front></Front>
+<!-- Pedestal ->
+<Pedestal></Pedestal>
+<!-- Consoles ->
+<Console></Console-->

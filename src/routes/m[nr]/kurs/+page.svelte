@@ -1,8 +1,15 @@
+
 <script>
 // @ts-nocheck
+//http://localhost:5173/m17/kurs/1-fundamentals?pensum=b1&level=1
 
     import { page } from "$app/stores";
     import Module from "$lib/components/Module.svelte";
+
+	let pensum = $page.url.searchParams.get('pensum')
+	let level = $page.url.searchParams.get('level')
+
+
 
     let moduleNr = $page.params.nr
     
@@ -160,7 +167,7 @@
 
 {#if moduleData}
     
-    <Module {moduleNr} {moduleData}></Module>
+    <Module {moduleNr} {moduleData} {pensum} {level}></Module>
     <!-- You can display other module details here -->
 {/if}
 
