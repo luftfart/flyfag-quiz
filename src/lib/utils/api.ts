@@ -53,7 +53,7 @@ export const createPocketbaseUser = async (data: any) => {
 	authData.set(res);
 
 	// (optional) send an email verification request
-	await pb.collection('flyfag_users').requestVerification(data.email); //query
+	//await pb.collection('flyfag_users').requestVerification(data.email); //query
 
 
 
