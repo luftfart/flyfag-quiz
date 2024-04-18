@@ -11,10 +11,10 @@
         Personvernerklæring
     </h1>
     <p>
-        Your privacy is important to us. It is { $page.data.siteName}' policy to respect your privacy and comply with
+        Your privacy is important to us. It is { $page.url.origin}' policy to respect your privacy and comply with
         any applicable law and regulation regarding any personal information we may collect about you,
         including across our website, <a class="text-accent" href="/"
-            >{$page.data.siteName}</a
+            >{$page.url.origin}</a
         >, and other sites we own and operate.
     </p>
     <p>This policy is effective as of 14 December 2021 and was last updated on 14 December 2021.</p>
@@ -188,7 +188,7 @@
     <p>
         Mads Fjellheim
         <br />
-        kontact@{ $page.data.siteName}
+        kontact@{ $page.url.origin}.no
     </p>
 </div>
 </div>

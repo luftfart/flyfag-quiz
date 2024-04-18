@@ -21,7 +21,7 @@
                 www.lovdata.no. Vilkårene i denne avtalen skal ikke forstås som noen begrensning i de
                 lovbestemte rettighetene, men oppstiller partenes viktigste rettigheter og plikter for
                 handelen. <a class="text-warning font-bold py-4" href="/"
-                    >{ $page.data.siteName}</a
+                    >{ $page.url.origin}</a
                 ></b
             >
         </p>
@@ -83,7 +83,7 @@
             4. Bestilling og levering
         </h4>
         <p>
-            Alle bestillinger gjøres på https://texbab.no ved å velge produktet(e) du ønsker å kjøpe. Du
+            Alle bestillinger gjøres på {$page.url.origin} ved å velge produktet(e) du ønsker å kjøpe. Du
             må da velge om du vil ha bestillingen din levert så raskt som mulig, hente Produktet selv
             (Pick-Up) eller om du ønsker å forhåndsbestilling. En forhåndsbestilling kan gjøres
             maksimalt (90) dager i forveien. Hver fullført bestilling bekreftes på e-post eller SMS. Vi
@@ -136,7 +136,10 @@
         <p>
             Reklamasjon må sendes skriftlig innen 6 timer etter varene er mottatt.<br />Når du mottar
             din ordre, er det viktig å sjekke varene for skader eller defekter. Skulle varen være skadet
-            eller ødelagt, kan du kontakte oss via e-post:&nbsp;maheshdesouza6@gmail.com&nbsp;eller på
+            eller ødelagt, kan du kontakte oss via e-post: <a
+            class="text-warning font-bold py-4"
+            href="mailto:kontakt@{$page.url.origin}.no">kontakt@{$page.url.origin}.no</a
+        > eller på
             vår Live chat.
         </p>
         <p />
@@ -267,7 +270,7 @@
         <p>
             Kontakte oss via e-post: <a
                 class="text-warning font-bold py-4"
-                href="mailto:kontakt@{$page.data.siteName}">kontakt@{$page.data.siteName}</a
+                href="mailto:kontakt@{$page.url.origin}.no">kontakt@{$page.url.origin}.no</a
             > eller på vår Live chat.
         </p>
         <p />

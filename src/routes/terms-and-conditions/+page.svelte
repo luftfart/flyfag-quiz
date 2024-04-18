@@ -13,7 +13,7 @@
     <h3 class="text-warning font-bold py-4">Introduction</h3>
     <p>
         These Website Standard Terms and Conditions written on this webpage shall manage your use of
-        our website, { $page.data.siteName} accessible at { $page.data.siteName}.
+        our website, { $page.url.origin} accessible at { $page.url.origin}.
     </p>
     <p>
         These Terms will be applied fully and affect to your use of this Website. By using this
@@ -23,7 +23,7 @@
     <p>Minors or people below 18 years old are not allowed to use this Website.</p>
     <h3 class="text-warning font-bold py-4">Intellectual Property Rights</h3>
     <p>
-        Other than the content you own, under these Terms, { $page.data.siteName} and/or its licensors own all the
+        Other than the content you own, under these Terms, { $page.url.origin} and/or its licensors own all the
         intellectual property rights and materials contained in this Website.
     </p>
     <p>
@@ -49,7 +49,7 @@
         <li>using this Website to engage in any advertising or marketing.</li>
     </ul>
     <p>
-        Certain areas of this Website are restricted from being access by you and { $page.data.siteName} may further
+        Certain areas of this Website are restricted from being access by you and { $page.url.origin} may further
         restrict access by you to any areas of this Website, at any time, in absolute discretion. Any
         user ID and password you may have for this Website are confidential and you must maintain
         confidentiality as well.
@@ -58,32 +58,32 @@
     <p>
         In these Website Standard Terms and Conditions, "Your Content" shall mean any audio, video
         text, images or other material you choose to display on this Website. By displaying Your
-        Content, you grant {$page.data.siteName} a non-exclusive, worldwide irrevocable, sub licensable license to
+        Content, you grant {$page.url.origin} a non-exclusive, worldwide irrevocable, sub licensable license to
         use, reproduce, adapt, publish, translate and distribute it in any and all media.
     </p>
     <p>
-        Your Content must be your own and must not be invading any third-party’s rights. { $page.data.siteName}
+        Your Content must be your own and must not be invading any third-party’s rights. { $page.url.origin}
         reserves the right to remove any of Your Content from this Website at any time without notice.
     </p>
     <h3 class="text-warning font-bold py-4">Your Privacy</h3>
     <p>Please read Privacy Policy.</p>
     <h3 class="text-warning font-bold py-4">No warranties</h3>
     <p>
-        This Website is provided "as is," with all faults, and { $page.data.siteName} express no representations or
+        This Website is provided "as is," with all faults, and { $page.url.origin} express no representations or
         warranties, of any kind related to this Website or the materials contained on this Website.
         Also, nothing contained on this Website shall be interpreted as advising you.
     </p>
     <h3 class="text-warning font-bold py-4">Limitation of liability</h3>
     <p>
-        In no event shall { $page.data.siteName}, nor any of its officers, directors and employees, shall be held
+        In no event shall { $page.url.origin}, nor any of its officers, directors and employees, shall be held
         liable for anything arising out of or in any way connected with your use of this Website
-        whether such liability is under contract. {$page.data.siteName}, including its officers, directors and
+        whether such liability is under contract. {$page.url.origin}, including its officers, directors and
         employees shall not be held liable for any indirect, consequential or special liability
         arising out of or in any way related to your use of this Website.
     </p>
     <h3 class="text-warning font-bold py-4">Indemnification</h3>
     <p>
-        You hereby indemnify to the fullest extent { $page.data.siteName} from and against any and/or all
+        You hereby indemnify to the fullest extent { $page.url.origin} from and against any and/or all
         liabilities, costs, demands, causes of action, damages and expenses arising in any way related
         to your breach of any of the provisions of these Terms.
     </p>
@@ -94,18 +94,18 @@
     </p>
     <h3 class="text-warning font-bold py-4">Variation of Terms</h3>
     <p>
-        { $page.data.siteName} is permitted to revise these Terms at any time as it sees fit, and by using this
+        { $page.url.origin} is permitted to revise these Terms at any time as it sees fit, and by using this
         Website you are expected to review these Terms on a regular basis.
     </p>
     <h3 class="text-warning font-bold py-4">Assignment</h3>
     <p>
-        The { $page.data.siteName} is allowed to assign, transfer, and subcontract its rights and/or obligations
+        The { $page.url.origin} is allowed to assign, transfer, and subcontract its rights and/or obligations
         under these Terms without any notification. However, you are not allowed to assign, transfer,
         or subcontract any of your rights and/or obligations under these Terms.
     </p>
     <h3 class="text-warning font-bold py-4">Entire Agreement</h3>
     <p>
-        These Terms constitute the entire agreement between { $page.data.siteName} and you in relation to your use of
+        These Terms constitute the entire agreement between { $page.url.origin} and you in relation to your use of
         this Website, and supersede all prior agreements and understandings.
     </p>
     <h3 class="text-warning font-bold py-4">Governing Law &amp; Jurisdiction</h3>

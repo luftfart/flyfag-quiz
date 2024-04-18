@@ -131,7 +131,7 @@
        
         <div class="bg-gray-300">
             <div class="container px-5 py-4 mx-auto">
-                <p class="text-center mt-6">Kopibeskyttet © 2024 Flyfagquiz.no</p>
+                <p class="text-center mt-6">928257045 Kopibeskyttet © 2024 Flyfagquiz.no</p>
             </div>
         </div>
     </footer>
