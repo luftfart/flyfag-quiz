@@ -66,12 +66,12 @@
       type="email"
       name="email"
       required
-      class="px-6 py-4 bg-white border shadow-sm placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-blue-200 focus:ring-4 block lg:w-1/3 rounded-lg text-lg"
+      class="px-6 py-4 bg-white border border-black shadow-sm placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-blue-200 focus:ring-4 block lg:w-1/3 rounded-lg text-lg"
       placeholder="olanordmann@gmail.com"
     /><button
       on:click={Register}
       type="submit"
-      class="px-6 py-4 bg-black text-white rounded-lg hover:bg-gray-800 text-lg relative"
+      class="px-6 py-4 bg-blue-500 rounded-md hover:bg-blue-600 focus:bg-blue-600 text-white rounded-lg text-lg relative"
     >
       Meld deg på venteliste
     </button>
