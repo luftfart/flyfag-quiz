@@ -21,7 +21,7 @@
                 www.lovdata.no. Vilkårene i denne avtalen skal ikke forstås som noen begrensning i de
                 lovbestemte rettighetene, men oppstiller partenes viktigste rettigheter og plikter for
                 handelen. <a class="text-warning font-bold py-4" href="/"
-                    >{ $page.url.origin}</a
+                    >{$page.url.origin.substring(8)}</a
                 ></b
             >
         </p>
@@ -138,7 +138,7 @@
             din ordre, er det viktig å sjekke varene for skader eller defekter. Skulle varen være skadet
             eller ødelagt, kan du kontakte oss via e-post: <a
             class="text-warning font-bold py-4"
-            href="mailto:kontakt@{$page.url.origin}.no">kontakt@{$page.url.origin}.no</a
+            href="mailto:kontakt@{$page.url.origin.substring(8)}">kontakt@{$page.url.origin.substring(8)}</a
         > eller på
             vår Live chat.
         </p>
@@ -270,7 +270,7 @@
         <p>
             Kontakte oss via e-post: <a
                 class="text-warning font-bold py-4"
-                href="mailto:kontakt@{$page.url.origin}.no">kontakt@{$page.url.origin}.no</a
+                href="mailto:kontakt@{$page.url.origin.substring(8)}">kontakt@{$page.url.origin.substring(8)}</a
             > eller på vår Live chat.
         </p>
         <p />

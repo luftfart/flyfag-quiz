@@ -188,7 +188,7 @@
     <p>
         Mads Fjellheim
         <br />
-        kontact@{ $page.url.origin}.no
+        kontakt@{$page.url.origin.substring(8)}
     </p>
 </div>
 </div>

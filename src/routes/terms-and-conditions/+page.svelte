@@ -13,17 +13,17 @@
     <h3 class="text-warning font-bold py-4">Introduction</h3>
     <p>
         These Website Standard Terms and Conditions written on this webpage shall manage your use of
-        our website, { $page.url.origin} accessible at { $page.url.origin}.
+        our website, {$page.url.origin.substring(8)} accessible at { $page.url.origin}.
     </p>
     <p>
         These Terms will be applied fully and affect to your use of this Website. By using this
         Website, you agreed to accept all terms and conditions written in here. You must not use this
         Website if you disagree with any of these Website Standard Terms and Conditions. 
     </p>
-    <p>Minors or people below 18 years old are not allowed to use this Website.</p>
+    <!--p>Minors or people below 18 years old are not allowed to use this Website.</p-->
     <h3 class="text-warning font-bold py-4">Intellectual Property Rights</h3>
     <p>
-        Other than the content you own, under these Terms, { $page.url.origin} and/or its licensors own all the
+        Other than the content you own, under these Terms, {$page.url.origin.substring(8)} and/or its licensors own all the
         intellectual property rights and materials contained in this Website.
     </p>
     <p>
@@ -105,7 +105,7 @@
     </p>
     <h3 class="text-warning font-bold py-4">Entire Agreement</h3>
     <p>
-        These Terms constitute the entire agreement between { $page.url.origin} and you in relation to your use of
+        These Terms constitute the entire agreement between {$page.url.origin.substring(8)} and you in relation to your use of
         this Website, and supersede all prior agreements and understandings.
     </p>
     <h3 class="text-warning font-bold py-4">Governing Law &amp; Jurisdiction</h3>
