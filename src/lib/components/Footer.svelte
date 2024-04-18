@@ -109,7 +109,13 @@
                     </h2>
                     <nav class="mb-10 list-none">
                         <li class="mt-3">
-                            <a class="text-gray-500 cursor-pointer hover:text-gray-900">Terms &amp; Privacy</a>
+                            <a class="text-gray-500 cursor-pointer hover:text-gray-900" href="/terms-and-conditions">Terms &amp; Conditions</a>
+                        </li>
+                        <li class="mt-3">
+                            <a class="text-gray-500 cursor-pointer hover:text-gray-900" href="/salgsvilkår">Salgsvilkår</a>
+                        </li>
+                        <li class="mt-3">
+                            <a class="text-gray-500 cursor-pointer hover:text-gray-900" href="privacy-policy">Privacy &amp;  Policy</a>
                         </li>
                         <li class="mt-3">
                             <a class="text-gray-500 cursor-pointer hover:text-gray-900">Pricing</a>
@@ -122,6 +128,7 @@
                
             </div>
         </div>
+       
         <div class="bg-gray-300">
             <div class="container px-5 py-4 mx-auto">
                 <p class="text-center mt-6">Kopibeskyttet © 2024 Flyfagquiz.no</p>

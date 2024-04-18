@@ -303,6 +303,7 @@
         </Column>
       </Row>
     </Grid-->
+    <Footer COMMIT_HASH="28b2bea" APP_VERSION="0.0.0"></Footer>
   </Content>
   
 <!--Navbar></Navbar-->
