@@ -79,19 +79,7 @@
             avregningsperiode og de samlede månedlige kostnadene opplyses.
         </p>
         <p />
-        <h4 class="text-warning font-bold py-4" id="h-4-bestilling-og-levering">
-            4. Bestilling og levering
-        </h4>
-        <p>
-            Alle bestillinger gjøres på {$page.url.origin} ved å velge produktet(e) du ønsker å kjøpe. Du
-            må da velge om du vil ha bestillingen din levert så raskt som mulig, hente Produktet selv
-            (Pick-Up) eller om du ønsker å forhåndsbestilling. En forhåndsbestilling kan gjøres
-            maksimalt (90) dager i forveien. Hver fullført bestilling bekreftes på e-post eller SMS. Vi
-            tar det eksplisitte forbehold om at et produkt kan være utsolgt på tidspunktet for
-            bestillingen, i så fall kan bestillingen kanselleres, helt eller delvis, og du vil bli
-            refundert tilsvarende.
-        </p>
-        <p />
+      
         <h4 class="text-warning font-bold py-4" id="h-5-avtaleinngaelsen">5. Avtaleinngåelsen</h4>
         <p>
             Når en avtale inngås på internett og forplikter for- brukeren til å betale, skal den
@@ -116,7 +104,7 @@
             betydning for kjøpsbeslutningen.
         </p>
         <p />
-        <h4 class="text-warning font-bold py-4" id="h-6-betaling">6. Betaling</h4>
+        <h4 class="text-warning font-bold py-4" id="h-6-betaling">5. Betaling</h4>
         <ul>
             <li>
                 <span class="font-bold">Kortbetaling</span> – Akseptert av Visa, MasterCard og Maestro.
@@ -130,6 +118,72 @@
                 og gavekort.
             </li>
         </ul>
+
+        <h4 class="text-warning font-bold py-4" id="h-4-bestilling-og-levering">
+            6. Levering
+        </h4>
+       
+        <p>
+            Alle bestillinger gjøres på <span id="url_origin">{$page.url.origin}</span> ved å velge produktet(e) du ønsker å kjøpe. Du må da velge om du vil ha bestillingen din levert så raskt som mulig, hente Produktet selv (Pick-Up) eller om du ønsker å forhåndsbestilling. En forhåndsbestilling kan gjøres maksimalt (90) dager i forveien. Hver fullført bestilling bekreftes på e-post eller SMS.
+        </p>
+        
+        <strong>Kjøp og bruk av tjenesten:</strong>
+        <p>
+            Når du kjøper et kurs hos oss, får du tilgang til våre flyfagprøver og/eller flyfagkurs i den valgte perioden, som angis i antall timer eller dager. Tiden begynner å løpe fra det tidspunktet du starter din første prøve eller kapittel i kurset. Vår tjeneste er tilgjengelig 24 timer i døgnet, men det kan forekomme unntak med nedetid på grunn av teknisk vedlikehold eller feilretting.
+        </p>
+        <p>
+            Ved kjøp av tilgang til vår tjeneste oppretter du en personlig konto som er kun for deg. Det er viktig at denne kontoen ikke deles, da den kan misbrukes til å kjøpe flere tjenester eller kurs ved hjelp av ditt mobilnummer eller betalingskort.
+        </p>
+        
+        <strong>Levering av tjenesten:</strong>
+        <p>
+            Tilgang til tjenesten gis umiddelbart etter fullført bestilling.
+        </p>
+    
+        <strong>Vanlige ombooking- og avbestillingsregler:</strong>
+        <ul>
+            <li>
+                <strong>Flyfagkurs + Flyfagøveprøver tilgang i 24 timer:</strong>
+                <ul>
+                    <li>Tiden begynner å løpe fra det tidspunktet du starter din første prøve eller kapittel i kurset. Etter denne perioden gjelder vanligvis ingen refusjon</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Flyfagkurs + Flyfagøveprøver tilgang i 30 dager med beståttgaranti:</strong>
+                <ul>
+                    <li>Ombooking og avbestilling må skje innen 24 timer etter kjøpet. Etter denne perioden gjelder vanligvis ingen refusjon, men du kan være berettiget til beståttgarantien hvis spesifikke vilkår i forbindelse med beståttgarantien er  møtt.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Flyfagkurs + Flyfagøveprøver tilgang i 7 dager:</strong>
+                <ul>
+                    <li>Ombooking og avbestilling må skje innen 24 timer etter kjøpet for full refusjon. Etter denne perioden gjelder vanligvis ingen refusjon, da tilgangen til kurset allerede er gitt.</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p>
+            Typisk frist for ombooking og avbestilling må skje innen 24 timer eller 0 timer etter kjøpet for full refusjon, som er avhengig av tjenesten eller kurset du har kjøpt.
+        </p>
+    
+        <p>Vi tar det eksplisitte forbeholdet om at et produkt/kurs kan være utsolgt/fullt på tidspunktet for bestillingen. I så fall kan bestillingen kanselleres, helt eller delvis, og du vil bli refundert tilsvarende.</p>
+            
+        
+        
+        <h4 class="text-warning font-bold py-4" id="h-1-avtalen">6. Avtalen</h4>
+        <p>
+            Forbrukerlovgivningen er ufravikelig, med mindre det avtales gunstigere vilkår for
+            forbrukeren enn det som følger av loven, jf. Forbrukerkjøpsloven (fkjl.) § 3 og
+            angrerettloven (angrl.) § 3.
+        </p>
+        <p>
+            Avtalen består i utgangspunktet av de opplysninger som kjøperen får i bestillingsløsningen,
+            samt disse standardvilkårene. Standardvilkårene kan fravikes til gunst for forbruker dersom
+            dette avtales i en direkte korrespondanse mellom kjøper og selger. I tilfeller hvor avtalen
+            ikke direkte gir løsningen på en problemstilling, må kontrakten utfylles med relevante
+            lovbestemmelser.
+        </p>
+       
         <h4 class="text-warning font-bold py-4" id="h-6-klager-og-reklamasjonsrett">
             6. Klager og reklamasjonsrett
         </h4>
