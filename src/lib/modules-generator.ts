@@ -153,10 +153,11 @@ function generateMCQQuestions(module_q_objs: any) {
   if (module_q_objs && Array.isArray(module_q_objs)) {
 
       for (const module_q_obj of module_q_objs) {
+		const options = module_q_obj.alternatives;
         const question = {
           q: `${module_q_obj.question}`,
           answer: module_q_obj.answer, //TODO given the true explanition. compress to short answer
-          options: [module_q_obj.answer,"placebo", "jack"], //TODO given true lengthy answer generate x(~two) answer options
+          options: Object.values(options), //TODO given true lengthy answer generate x(~two) answer options
         };
       
         //console.log("-q_obj->",question);
