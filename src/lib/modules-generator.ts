@@ -151,13 +151,18 @@ function generateMCQQuestions(module_q_objs: any) {
 
 
   if (module_q_objs && Array.isArray(module_q_objs)) {
+		interface Question {
+			q: string;
+			answer: string;
+			options: string[];
+		}
 
       for (const module_q_obj of module_q_objs) {
 		const options = module_q_obj.alternatives;
-        const question = {
-          q: `${module_q_obj.question}`,
-          answer: module_q_obj.answer, //TODO given the true explanition. compress to short answer
-          options: Object.values(options), //TODO given true lengthy answer generate x(~two) answer options
+        const question: Question = {
+          q: `${module_q_obj.question.trim()}`,
+          answer: module_q_obj.answer.trim(), //TODO given the true explanition. compress to short answer
+          options: generateAlternatives(options), //TODO given true lengthy answer generate x(~two) answer options
         };
       
         //console.log("-q_obj->",question);
@@ -165,6 +170,22 @@ function generateMCQQuestions(module_q_objs: any) {
 
 
       }
+	  function generateAlternatives(options: Record<string, string>): string[] {
+		const optionValues = Object.values(options);
+		const alternativeOptions: string[] = [];
+		
+		// Randomly select two options
+		while (alternativeOptions.length < 3) {
+		  const randomIndex = Math.floor(Math.random() * optionValues.length);
+		  const randomOption = optionValues[randomIndex].trim();
+		  
+		  if (!alternativeOptions.includes(randomOption)) {
+			alternativeOptions.push(randomOption);
+		  }
+		}
+		
+		return alternativeOptions;
+	  }
     
     
 

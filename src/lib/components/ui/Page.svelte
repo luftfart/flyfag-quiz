@@ -19,20 +19,11 @@
 
 <style>
   .animated {
-    position: absolute;
+    /*position: absolute;*/
     width: 100vw;
   }
 
  
 
-  footer {
-    color: var(--grey-300);
-    margin: 4rem 0 2rem 0;
-    font-size: 10px;
-    text-align: center;
-  }
-
-  span {
-    color: var(--red-050);
-  }
+ 
 </style>

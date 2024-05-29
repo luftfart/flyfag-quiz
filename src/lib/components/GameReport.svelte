@@ -24,11 +24,11 @@
     <ul>
       {#each questions as question, idx}
         {#if !results[idx]}
-          <li>
-            {@html question.q} = {@html question.answer}
-            <span>
-              <IconWrong />
-            </span>
+          <li class="text-left">
+            <IconWrong />
+            <p class="font-bold text-xs text-left">{@html question.q}:</p> 
+            <p class="text-xs text-left">{@html question.answer}</p>
+            
           </li>
         {/if}
       {/each}
@@ -65,25 +65,11 @@
 </Card>
 
 <style>
-  ul {
-    font-size: 18px;
-    margin: 1em 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
-  li {
-    display: flex;
-    align-items: center;
-  }
 
-  span {
-    line-height: 1em;
-    padding-left: 1em;
-    padding: 0.5em;
-  }
+  
+
+
 
   p {
     font-size: 24px;

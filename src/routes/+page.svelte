@@ -1,5 +1,7 @@
 <script>
   import { ImageLoader } from "carbon-components-svelte";
+  import Footer from "$lib/components/Footer.svelte";
+
   import { createPocketbaseUser, getUsernameFromEmail } from "$lib/utils/api";
   /**
    * @type {any}
@@ -105,5 +107,7 @@
   src="https://www.youtube.com/embed/TYJ8uoJ7DAk?feature=oembed"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen=""
+  allowfullscreen
 ></iframe>
+
+
