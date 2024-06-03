@@ -22,9 +22,9 @@ _modules.forEach(module => {
 })
 
 //console.log('initialState:',initialState)
+const KEY = "tafels-app-v9";
 
-function createStore() {
-  const KEY = "tafels-app-v9";
+function createStore_vr0() {
 
   let modules_data = writable(initialState);
   
@@ -41,6 +41,29 @@ function createStore() {
   return modules_data;
   
 
+}
+
+
+
+function createStore() {
+  let savedState = initialState;
+
+  if (typeof window !== "undefined") {
+    const storedState = window.localStorage.getItem(KEY);
+    if (storedState) {
+      savedState = JSON.parse(storedState);
+    }
+  }
+
+  const modules_data = writable(savedState);
+
+  if (typeof window !== "undefined") {
+    modules_data.subscribe((currentState) => {
+      window.localStorage.setItem(KEY, JSON.stringify(currentState));
+    });
+  }
+
+  return modules_data;
 }
 
 export const _module_data = initialState

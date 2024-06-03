@@ -198,7 +198,9 @@ import { page } from "$app/stores";
 
 <svelte:head>
   <!-- Primary Meta Tags -->
-  <title>M{moduleNr} {moduleData[moduleNr].name} -  {moduleData[moduleNr].topics[challenge.id]} | flyfagquiz.no</title>
+  <!--title>M{moduleNr} {moduleData[moduleNr].name} -  {moduleData[moduleNr].topics[challenge.id]} | flyfagquiz.no</title-->
+
+  <title>M{moduleNr} {moduleData[moduleNr].name} - {challenge.topic} {moduleData[moduleNr].topics[challenge.id]} | flyfagquiz.no</title>
   <meta name="title" content="M15 Gassturbin -  Engine performance | flyfagquiz.no" />
   <meta name="description" content="Bestå alle part66 modulene med flyfagquiz.no, som over 30.000 andre. Stressfri med BESTÅTTGARANTI· Nå dine eksamensmål med prøveeskamen, øvingsoppgaver" />
 

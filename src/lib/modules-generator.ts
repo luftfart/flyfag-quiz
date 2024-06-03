@@ -1,4 +1,5 @@
 import { addRndOptions, mcqOptions, generate, generateMCQ } from "$lib/question-utils";
+import { repository } from "$lib/utils/stores";
 import type { Question } from "$lib/types";
 export let emne: any;
 
@@ -6,112 +7,7 @@ export let emne: any;
 emne = 1
 
 
-let repository = [
-	{ 
-		1: {
-			name: "Matematikk",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		2: {
-			name: "Fysikk",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		3: {
-			name: "Elektro",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		4: {
-			name: "Elektronikklære",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		5: {
-			name: "Digitalteknikk",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		6: {
-			name: " Materiallære",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		7: {
-			name: "Vedlikeholdsteknikk",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		8: {
-			name: "Aerodynamikk",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		9: {
-			name: "Human Factors",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		10: {
-			name: "Lover og bestemmelser",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		11: {
-			name: "Luftfartøylære",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		12: {
-			name: "HASS",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		13: {
-			name: "LASS",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		14: {
-			name: "Motorfremdrift",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	
-	{ 
-		15: {
-			name: "GASS",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		16: {
-			name: "Stempelmotor",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		17: {
-			name: "Propeller",
-			topics: ["intro","prøveeksamen"]
-		}
-	}
 
-];
 
 
 function generateTableQuestions(base: number) {
@@ -159,18 +55,48 @@ function generateMCQQuestions(module_q_objs: any) {
 
       for (const module_q_obj of module_q_objs) {
 		const options = module_q_obj.alternatives;
-        const question: Question = {
-          q: `${module_q_obj.question.trim()}`,
-          answer: module_q_obj.answer.trim(), //TODO given the true explanition. compress to short answer
-          options: generateAlternatives(options), //TODO given true lengthy answer generate x(~two) answer options
-        };
+		let question: Question;
+		if (module_q_obj.stage === "new") {
+			question = {
+			q: `${module_q_obj.question.trim()}`,
+			answer: module_q_obj.answer.trim(), //TODO given the true explanition. compress to short answer
+			options: generateAlternatives(options), //TODO given true lengthy answer generate x(~two) answer options
+			};
+		} else {
+			question = {
+				q: `${module_q_obj.question.trim()}`,
+				answer: module_q_obj.answer.trim(), //TODO given the true explanition. compress to short answer
+				options: showAlternatives(options), //TODO given true lengthy answer generate x(~two) answer options
+			};
+	
+		
+
+		}
       
         //console.log("-q_obj->",question);
         table.push(question);
 
 
       }
+	  function showAlternatives(options: Record<string, string>): string[] {
+		const optionValues = Object.values(options);
+		const alternativeOptions: string[] = [];
+		
+		// Randomly select two options
+		while (alternativeOptions.length < 3) {
+		  const randomIndex = Math.floor(Math.random() * optionValues.length);
+		  const randomOption = optionValues[randomIndex].trim();
+		  
+		  if (!alternativeOptions.includes(randomOption)) {
+			alternativeOptions.push(randomOption);
+		  }
+		}
+		
+		return alternativeOptions;
+	  }
 	  function generateAlternatives(options: Record<string, string>): string[] {
+		//TODO set stage to "edited"
+		
 		const optionValues = Object.values(options);
 		const alternativeOptions: string[] = [];
 		
@@ -204,9 +130,9 @@ function generateMCQQuestions(module_q_objs: any) {
   
   return mcqOptions({
     table,
-    total: 3,
-    min: 1,
-    max: 3,
+    total: 100,
+    min: 100,
+    max: 100,
   });
 }
 
