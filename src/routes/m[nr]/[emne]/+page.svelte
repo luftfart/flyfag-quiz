@@ -1,5 +1,6 @@
 <script>
 // @ts-nocheck
+import MathJax from "$lib/components/MathJax.svelte";
 
 import { browser } from "$app/environment";
 import { page } from "$app/stores";
@@ -9,6 +10,7 @@ import { page } from "$app/stores";
   import Game from "$lib/components/Game.svelte";
   //import { modules } from "./modulesQuestions";
   import { store } from "$lib/questions-store";
+  import { repository } from "$lib/utils/stores";
 
 
 
@@ -44,118 +46,12 @@ import { page } from "$app/stores";
 
 
 
-  let repository = [
-	{ 
-		1: {
-			name: "Matematikk",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		2: {
-			name: "Fysikk",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		3: {
-			name: "Elektro",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		4: {
-			name: "Elektronikklære",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		5: {
-			name: "Digitalteknikk",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		6: {
-			name: " Materiallære",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		7: {
-			name: "Vedlikeholdsteknikk",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		8: {
-			name: "Aerodynamikk",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		9: {
-			name: "Human Factors",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		10: {
-			name: "Lover og bestemmelser",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		11: {
-			name: "Luftfartøylære",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		12: {
-			name: "HASS",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		13: {
-			name: "LASS",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		14: {
-			name: "Motorfremdrift",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	
-	{ 
-		15: {
-			name: "GASS",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		16: {
-			name: "Stempelmotor",
-			topics: ["intro","prøveeksamen"]
-		}
-	},
-	{ 
-		17: {
-			name: "Propeller",
-			topics: ["intro","prøveeksamen"]
-		}
-	}
-
-];
-
-  
 
 
 
-  
+   onMount(() => {
+      console.log('loaded')
+    });
 
 
  
@@ -229,6 +125,8 @@ import { page } from "$app/stores";
         Dette er bare en liten demo, men flere spørsmåler kommer jo:), Jeg jobber hardt å få publisere disse. Om du har noen spørsmål, forespørsel eller vil være med arbeidet kontakt meg direkte på:
         <a href="mailto:kontakt@{$page.url.origin.substring(8)}" class="link underline text-blue">kontakt@{$page.url.origin.substring(8)}</a>
     </p>
+	<MathJax math={'\\( \\sqrt{11}\\).'}></MathJax>
+
 
 
   <Game {challenge} mode="mcq"/>

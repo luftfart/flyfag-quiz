@@ -1,5 +1,5 @@
 <script lang="ts">
-      import MathJax from "$lib/components/MathJax.svelte";
+  import MathJax from "$lib/components/MathJax.svelte";
 
   import type { Question, Challenge } from "$lib/types";
   import Card from "./ui/Card.svelte";
@@ -14,6 +14,7 @@
   import { nock, squakk, yeah } from "$lib/helpers/soundFx";
   import { store } from "$lib/questions-store.js";
   import { practiceStore } from "$lib/practice-store";
+
   import { marked } from "marked";
 
 
@@ -115,7 +116,7 @@
               on:correct={handleCorrect}
               on:wrong={handleWrong}
             >
-            <div class="bg-blue-500 hover:bg-blue-700 p-1 m-2 rounded"> {@html marked(option)} <!--MathJax math={ option}></MathJax--></div>
+            <div class="bg-blue-500 hover:bg-blue-700 p-1 m-2 rounded"> <!--{@html marked(option)}--> <MathJax math={`${option}`}></MathJax></div>
             </GameButton>
           
         {/each}

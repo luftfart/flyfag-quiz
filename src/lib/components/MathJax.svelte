@@ -24,7 +24,7 @@
 </script>
 
 <p>
-	{math}
+	{@html math}
 </p>
 
 
